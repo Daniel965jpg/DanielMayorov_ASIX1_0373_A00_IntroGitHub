@@ -173,13 +173,109 @@ Esta es la parte más potente de **GitHub**.
 
 
 Una **rama** es una línea de tiempo paralela de commits. La rama principal se llama `main`.
+### Flujo de trabajo
 
+1. Crea una rama nueva para cada tarea (ej. `feature/añadir-formulario`).
+2. Trabaja y haz commits en esa rama.
+3. Cuando termines, abre un **Pull Request (PR)**.
+4. Un PR es una "solicitud para fusionar" tu rama con `main`.
+5. Otras personas pueden revisar tu código, dejar comentarios y aprobarlo.
+6. Una vez aprobado, fusiona el PR y tu trabajo se incorpora a `main`.
 
 > **Importante:** Nunca deberías trabajar directamente sobre `main`.
+
+# 1. Asegúrate de que estás en "main" y tienes la última versión
+git checkout main
+git pull
+
+# 2. Crea y cámbiate a una nueva rama
+git checkout -b feature/nuevo-formulario
+
+# 3. Haz tu trabajo... (edita, 'git add', 'git commit')
+# ...
+git add .
+git commit -m "Añade formulario de contacto"
+
+# 4. Sube tu *nueva rama* a GitHub
+git push -u origin feature/nuevo-formulario
+
+# 5. Ve a GitHub: la plataforma detectará la nueva rama
+#    y te mostrará un botón para "Crear un Pull Request".
+
+---
+# 5. Fundamentos Web
 
 
 ---
 
+
+## 5.1. Markdown (`.md`)
+
+
+Markdown es el lenguaje con el que se escriben archivos como los **README.md**.
+Es una **sintaxis sencilla** para formatear texto plano, ideal para documentación, blogs o notas técnicas.
+
+
+### Sintaxis básica de Markdown
+
+
+```markdown
+# Título H1
+## Título H2
+### Título H3
+
+
+**Texto en negrita**
+*Texto en cursiva*
+`Código en línea`
+
+
+- Elemento de lista 1
+- Elemento de lista 2
+- Sub-elemento 2.1
+- Sub-elemento 2.2
+
+
+> Esto es un texto citado (blockquote).
+
+
+[Esto es un enlace a Google](https://www.google.com)
+
+
+![Esto es una imagen](ruta/a/la/imagen.png)
+```
+
+
+### Bloques de código
+
+
+Para escribir bloques de código de varias líneas, se utilizan tres tildes invertidas (```) seguidas del lenguaje opcional:
+
+
+```html
+<!-- Ejemplo de bloque de código HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi página</title>
+</head>
+<body>
+<h1>Hola Mundo</h1>
+<p>Esto es un párrafo de ejemplo.</p>
+</body>
+</html>
+```
+
+
+### Tips adicionales
+
+
+- Puedes usar listas anidadas para organizar mejor tu información.
+- Para enlaces relativos a tu proyecto, usa rutas locales: `[Archivo](docs/archivo.md)`.
+- Las imágenes también pueden usar rutas locales o URLs absolutas.
+- Markdown soporta tablas, listas de tareas y líneas horizontales (`---`) para estructurar el contenido.
+- Mantén tu archivo `.md` limpio y organizado para facilitar la lectura.
 
 ### Flujo de trabajo típico
 
@@ -235,5 +331,62 @@ Utiliza etiquetas como `<header>`, `<main>`, `<footer>`, `<nav>`, `<section>` y 
 
 **Consejos adicionales:**
 * Mantén tu HTML limpio y organizado con sangrías consistentes.
-* Usa comentarios: `` para documentar tu código.
+* Usa comentarios: // para documentar tu código.
 * Combina HTML con CSS para diseño y estilo y con JavaScript para interactividad (que aun no hemos hecho).
+
+## 5.3. La importancia de `index.html`
+
+
+El archivo `index.html` es fundamental en cualquier sitio web. Los servidores web están configurados para buscar automáticamente este archivo cuando un usuario visita la URL raíz de un directorio (ej. `www.ejemplo.com`).
+
+
+### Por qué es importante
+
+
+- **Página de inicio:** `index.html` actúa como la puerta de entrada a tu sitio web, mostrando el contenido inicial que los usuarios verán.
+- **Navegación:** Facilita que los visitantes accedan a otras páginas del sitio mediante enlaces desde esta página principal.
+- **SEO y motores de búsqueda:** Tener un `index.html` correctamente estructurado ayuda a que los motores de búsqueda indexen tu sitio de manera eficiente.
+- **Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo como punto de entrada.
+
+
+### Buenas prácticas
+
+
+- Mantén la estructura limpia: `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` correctamente anidados.
+- Incluye títulos (`<title>`), meta etiquetas (`<meta>`), y enlaces a hojas de estilo o scripts.
+- Usa contenido relevante y jerarquía clara de encabezados (`<h1>`, `<h2>`, `<h3>`).
+- Optimiza el rendimiento: minimiza scripts y CSS innecesarios para que la página cargue rápido.
+- Incluye accesibilidad: etiquetas semánticas y atributos como `alt` en imágenes.
+
+
+### Ejemplo básico de `index.html`
+
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Página Principal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Bienvenido a Mi Sitio</h1>
+</header>
+
+
+<main>
+<section>
+<h2>Sobre Nosotros</h2>
+<p>Esta es la página de inicio donde presentamos nuestro sitio web.</p>
+</section>
+</main>
+
+
+<footer>
+<p>&copy; 2025 Mi Sitio Web.</p>
+</footer>
+</body>
+</html>
