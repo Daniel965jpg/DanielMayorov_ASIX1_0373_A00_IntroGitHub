@@ -186,3 +186,37 @@ La rama principal se llama `main`.
 Luego, ve a **GitHub**: la plataforma detectará la nueva rama y te mostrará un botón para **"Crear un Pull Request"**.
 
 > ✨ **Consejo:** Trabaja siempre en ramas separadas para mantener tu `main` limpio y estable.
+## 5. Fundamentos Web
+
+---
+
+### 5.1. Markdown (`.md`)
+
+Markdown es el lenguaje con el que se escriben archivos como los **README.md**.  
+Es una **sintaxis sencilla** para formatear texto plano, ideal para documentación, blogs o notas técnicas.
+
+#### Sintaxis básica de Markdown
+
+```markdown
+# Título H1
+## Título H2
+### Título H3
+
+**Texto en negrita**
+*Texto en cursiva*
+`Código en línea`
+
+- Elemento de lista 1
+- Elemento de lista 2
+
+> Esto es un texto citado (blockquote).
+
+[Esto es un enlace a Google](https://www.google.com)
+
+![Esto es una imagen](ruta/a/la/imagen.png)
+💡 ### Tips adicionales:
+
+* Los bloques de código se indican con tres tildes invertidas (```) o con indentación de 4 espacios.
+* Se pueden crear listas anidadas utilizando espacios o tabulaciones.
+* Para enlaces relativos a tu proyecto puedes usar rutas locales: `[Archivo](docs/archivo.md)`
+* Las imágenes también pueden tener rutas locales o URLs absolutas.
