@@ -394,23 +394,19 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 </body>
 </html>
 
-## 5. Fundamentos Web
-
 ---
 
-### 5.2. ¿Qué es HTML?
+### 5. Fundamentos Web
 
-HTML (**HyperText Markup Language**) es el **lenguaje estándar de marcado** que se utiliza para **crear la estructura y el contenido de una página web**.  
-No es un lenguaje de programación, sino un lenguaje **descriptivo**, que indica al navegador cómo debe mostrarse cada parte del contenido.
+### ¿Qué es HTML?
 
-**En otras palabras:** HTML es el esqueleto de cualquier sitio web.  
-Define elementos como títulos, párrafos, enlaces, imágenes, listas, tablas, formularios, y más.
+* HTML significa **HyperText Markup Language**.
+* Es el lenguaje estándar para crear la **estructura y contenido** de una página web.
+* **No es un lenguaje de programación**, sino un lenguaje de marcado (descriptivo).
+* Actúa como el "esqueleto" de un sitio web.
+* Define elementos como: títulos, párrafos, enlaces, imágenes, listas, tablas, etc.
 
----
-
-### 🧩 Estructura básica de un documento HTML
-
-Un documento HTML se compone de una jerarquía de etiquetas que definen la estructura del contenido.
+### Estructura básica de un documento HTML
 
 ```html
 <!DOCTYPE html>
@@ -441,40 +437,24 @@ Un documento HTML se compone de una jerarquía de etiquetas que definen la estru
 </body>
 </html>
 
-## 5.3. La importancia de `index.html`
+## La importancia de `index.html`
 
----
+* Es el **punto de entrada principal** de un sitio web.
+* Los servidores web lo buscan automáticamente cuando un usuario visita la raíz de un dominio (ej. `www.ejemplo.com`).
+* Actúa como la **página de inicio** o portada del sitio.
 
-El archivo **`index.html`** es el **punto de entrada principal** de cualquier sitio web.  
-Cuando un usuario accede a la dirección raíz de un dominio (por ejemplo: `https://www.ejemplo.com`), el servidor web busca automáticamente un archivo llamado **`index.html`** para mostrar su contenido.
+### ¿Por qué es importante?
 
-Este comportamiento hace que `index.html` actúe como la **página de inicio** o **portada** del sitio web.
+* **Página de inicio:** Es la primera página que ven los usuarios.
+* **Navegación:** Suele contener los enlaces a otras secciones.
+* **SEO:** Ayuda a los motores de búsqueda a indexar el sitio.
+* **Compatibilidad:** Es el archivo estándar que esperan los servidores y hostings.
+* **Profesionalismo:** Un sitio sin `index.html` se considera incompleto.
 
----
+### Buenas prácticas
 
-### 🔍 ¿Por qué es importante?
-
-- **Página de inicio:** Es la primera página que los usuarios ven al visitar tu sitio.  
-- **Navegación:** Suele contener enlaces hacia las demás secciones del sitio.  
-- **SEO (Optimización en buscadores):** Un `index.html` bien estructurado ayuda a los motores de búsqueda (como Google) a indexar correctamente tu sitio.  
-- **Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo por defecto para cargar la web.  
-- **Profesionalismo:** Un sitio sin `index.html` se considera incompleto o mal configurado.
-
----
-
-### 🧾 Buenas prácticas
-
-- Usa siempre la estructura básica de HTML5:
-  ```html
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Mi Página Principal</title>
-      <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <!-- Contenido -->
-  </body>
-  </html>
+* Mantén la estructura limpia: `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` correctamente anidados.
+* Incluye títulos (`<title>`), meta etiquetas (`<meta>`), y enlaces a hojas de estilo o scripts.
+* Usa contenido relevante y jerarquía clara de encabezados (`<h1>`, `<h2>`, `<h3>`).
+* Optimiza el rendimiento: minimiza scripts y CSS innecesarios para que la página cargue rápido.
+* Incluye accesibilidad: etiquetas semánticas y atributos como `alt` en imágenes.
