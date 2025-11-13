@@ -115,10 +115,10 @@ git init
 git add .
 git commit -m "Commit inicial"
 
-Para bajar los cambios del remoto y fusiónarlos con nuestro trabajo el comando es:
+Para bajar los cambios del remoto y fusionarlos con nuestro trabajo el comando es:
 git pull
 
-### 4. Colaboración: Ramas y Pull Requests
+## 4. Colaboración: Ramas y Pull Requests
 
 Esta es la parte más potente de GitHub.
 
@@ -131,7 +131,6 @@ Esta es la parte más potente de GitHub.
     5.  Otras personas pueden revisar tu código, dejar comentarios y, finalmente, aprobarlo.
     6.  Una vez aprobado, fusionas el PR y tu trabajo se incorpora a `main`.
 
-```bash
 # 1. Asegúrate de que estás en "main" y tienes la última versión
 git checkout main
 git pull
@@ -149,4 +148,3 @@ git push -u origin feature/nuevo-formulario
 
 # 5. Ve a GitHub: la plataforma detectará la nueva rama
 #    y te mostrará un botón para "Crear un Pull Request".
-```bash 
