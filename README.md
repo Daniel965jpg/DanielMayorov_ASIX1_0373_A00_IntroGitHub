@@ -84,69 +84,86 @@ El flujo es:
     ---------------
 ## 3. Empezando un Proyecto
 
-Un repositorio ("repo") es simplemente una carpeta de proyecto que está siendo rastreada por Git.
+Un **repositorio** (o *repo*) es simplemente una carpeta de proyecto que está siendo rastreada por **Git**.
 
-### 3.1. Opción 1: Clonar un Repositorio Existente (El más común)
+---
 
-Clonar descarga una copia completa de un proyecto existente en GitHub (incluyendo todo el historial) a tu ordenador.
+
+### 3.1. Opción 1: Clonar un Repositorio Existente (la más común)
+
+Clonar descarga una copia completa de un proyecto existente en GitHub (incluyendo todo su historial) a tu ordenador.
 
 ```bash
-# Busca el botón verde "Code" en GitHub y copia la URL HTTPS
-git clone [https://github.com/usuario/nombre-del-repo.git](https://github.com/usuario/nombre-del-repo.git)
+# 1. Busca el botón verde "Code" en GitHub y copia la URL HTTPS
+git clone https://github.com/usuario/nombre-del-repo.git
 
-# Esto crea una nueva carpeta "nombre-del-repo". Entra en ella:
+# 2. Esto crea una nueva carpeta "nombre-del-repo". Entra en ella:
 cd nombre-del-repo
 
 ### 3.2. Opción 2: Crear un Repositorio Local Nuevo (desde cero)
 
-Si empiezas un proyecto nuevo desde tu ordenador.
+Si estás empezando un proyecto nuevo desde tu ordenador:
 
-# Crea tu carpeta de proyecto
+# 1. Crea tu carpeta de proyecto
 mkdir mi-proyecto
 cd mi-proyecto
 
-# Inicializa Git dentro de esta carpeta
+# 2. Inicializa Git dentro de esta carpeta
 git init
 
-# Ahora Git está observando. Haz tu primer commit:
+# 3. Ahora Git está observando. Haz tu primer commit:
 git add .
 git commit -m "Commit inicial"
 
 ### 3.3. Sincronizar Cambios
 
-Para bajar los cambios del remoto y fusionarlos con nuestro trabajo el comando es:
+Para bajar los cambios del remoto y fusionarlos con tu trabajo local, usa:
 
-```bash
 git pull
 
-## 4. Colaboración: Ramas y Pull Requests
+## 🤝 4. Colaboración: Ramas y Pull Requests
 
-Esta es la parte más potente de GitHub.
+Esta es la parte más potente de **GitHub**.
 
-* **Rama (Branch):** Una rama es una línea de tiempo paralela de commits. La rama principal se llama `main`. **Nunca se debería trabajar directamente sobre** `main`.
+---
 
-* **Flujo de trabajo:**
-    1.  Creas una rama nueva para cada tarea (ej. `feature/añadir-formulario`).
-    2.  Trabajas y haces commits en esa rama.
-    3.  Cuando terminas, abres un **Pull Request (PR)**.
-    4.  Un PR es una "solicitud para fusionar" tu rama con `main`.
-    5.  Otras personas pueden revisar tu código, dejar comentarios y, finalmente, aprobarlo.
-    6.  Una vez aprobado, fusionas el PR y tu trabajo se incorpora a `main`.
+### Rama (*Branch*)
 
-# 1. Asegúrate de que estás en "main" y tienes la última versión
-git checkout main
-git pull
+Una rama es una línea de tiempo paralela de commits.  
+La rama principal se llama `main`.  
+--> **Nunca deberías trabajar directamente sobre** `main`.
 
-# 2. Crea y cámbiate a una nueva rama
-git checkout -b feature/nuevo-formulario
+---
 
-# 3. Haz tu trabajo... (edita, 'git add', 'git commit')
-# ...
-git add .
-git commit -m "Añade formulario de contacto"
+###  Flujo de trabajo típico
 
-# 4. Sube tu *nueva rama* a GitHub
-git push -u origin feature/nuevo-formulario
+1. Crea una rama nueva para cada tarea (por ejemplo: `feature/añadir-formulario`).
+2. Trabaja y haz commits en esa rama.
+3. Cuando termines, abre un **Pull Request (PR)**.
+4. Un PR es una "solicitud para fusionar" tu rama con `main`.
+5. Otras personas pueden revisar tu código, dejar comentarios y aprobarlo.
+6. Una vez aprobado, se fusiona el PR y tu trabajo se incorpora a `main`.
 
-# 5. Ve a GitHub: la plataforma detectará la nueva rama
-#    y te mostrará un botón para "Crear un Pull Request".
+### Ejemplo práctico
+
+1. Asegúrate de que estás en `main` y tienes la última versión.  
+   → `git checkout main`  
+   → `git pull`
+
+2. Crea y cámbiate a una nueva rama.  
+   → `git checkout -b feature/nuevo-formulario`
+
+3. Haz tu trabajo (editar, añadir, commitear).  
+   → `git add .`  
+   → `git commit -m "Añade formulario de contacto"`
+
+4. Sube tu nueva rama a GitHub.  
+   → `git push -u origin feature/nuevo-formulario`
+
+---
+
+Luego, ve a **GitHub**: la plataforma detectará la nueva rama  
+y te mostrará un botón para **"Crear un Pull Request"**.
+
+**Consejo:** Trabaja siempre en ramas separadas para mantener tu `main` limpio y estable.
+
