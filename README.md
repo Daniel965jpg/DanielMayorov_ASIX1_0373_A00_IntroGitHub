@@ -450,6 +450,124 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 </body>
 </html>
 ```
+## Organización y Legibilidad
+
+* El código debe ser **legible** para otros humanos, no solo para el navegador.
+* **Comentarios:** Se usan para dejar notas en el código que el navegador ignorará. La sintaxis es ``.
+* **Sangrado (Indentación):** Se usa para ver claramente qué etiquetas están dentro de otras (anidación) y facilitar la lectura.
+* **Organización de Archivos:** Se recomienda organizar el proyecto en carpetas (ej. `/css` para estilos, `/imatges` para imágenes).
+* **`index.html`:** El archivo HTML principal de la web debe llamarse `index.html`, ya que es el nombre que los servidores buscan por defecto.
+
+## Elementos y Atributos
+
+---
+
+### Tipos de Elementos
+
+* **Elementos de Bloque (Block):** Ocupan todo el ancho disponible y empiezan en una nueva línea (ej. `<p>`, `<h1>`, `<div>`).
+* **Elementos de Línea (Inline):** Ocupan solo el espacio necesario y fluyen dentro del texto (ej. `<a>`, `<strong>`, `<img>`).
+
+---
+
+### Atributos Genéricos
+
+* Los atributos proporcionan **información adicional** a una etiqueta.
+* **`id`:** Identificador **único** para un elemento en la página.
+* **`class`:** Nombre de clase para agrupar múltiples elementos (muy usado para CSS).
+* **`style`:** Se usa para aplicar estilos CSS directamente (inline).
+* **`title`:** Muestra un texto (tooltip) cuando el ratón pasa por encima.
+* **`lang`:** Especifica el idioma del contenido (ej. `<html lang="ca">`).
+
+---
+
+## Etiquetas de Texto Principales
+
+* **`<h1>` a `<h6>`:** Encabezados o Títulos. [cite_start]`<h1>` es el más importante y `<h6>` el menos importante. [cite: 1213]
+* [cite_start]**`<p>`:** Define un párrafo. [cite: 1226]
+* [cite_start]**`<em>`:** Para dar énfasis (normalmente se ve en cursiva). [cite: 1235, 1283]
+* [cite_start]**`<strong>`:** Para dar una énfasis fuerte (normalmente se ve en negrita). [cite: 1236, 1283]
+* [cite_start]**`<br/>`:** Inserta un salto de línea forzado. [cite: 1227, 1312]
+* [cite_start]**`<hr/>`:** Crea una línea horizontal separadora. [cite: 1228]
+* [cite_start]**`<blockquote>`:** Se usa para citar un bloque de texto largo. [cite: 1229, 1291]
+* **`<div>`:** Contenedor genérico de **bloque**. [cite_start]Se usa para agrupar y estructurar secciones. [cite: 1231, 1330]
+* **`<span>`:** Contenedor genérico en **línea**. [cite_start]Se usa para agrupar texto o elementos dentro de un bloque. [cite: 1245, 1330]
+
+### ⚠️ Etiquetas "antiguas" (Evitar)
+
+* [cite_start]No se deben usar etiquetas como `<b>` (negrita) o `<i>` (cursiva), ya que solo definen presentación y no estructura. [cite: 1324, 1325]
+* Para eso se usa CSS. [cite_start]En su lugar, usa `<strong>` y `<em>` que tienen valor semántico (de significado). [cite: 1324, 1326]
+
+---
+##  Enlaces e Imágenes
+
+---
+
+### Enlaces (Hipervínculos)
+
+* Se crean con la etiqueta `<a>` (de ancla) y el atributo `href` que indica el destino.
+* **Enlaces externos:** Apuntan a otra web (ej. `<a href="https://google.com">Google</a>`).
+* **Enlaces locales:** Apuntan a otra página de tu propio sitio (ej. `<a href="contacto.html">Contacto</a>`).
+* **Enlaces tipo ancla (internos):** Permiten navegar a otra parte *de la misma página*.
+    * Primero se crea el ancla con un `id` (ej. `<h2 id="seccion1">Sección 1</h2>`).
+    * Luego se enlaza a ella usando `#` (ej. `<a href="#seccion1">Ir a Sección 1</a>`).
+
+---
+
+### Imágenes
+
+* Se insertan con la etiqueta `<img>`, que es un elemento en línea y no tiene etiqueta de cierre.
+* **`src`:** Atributo obligatorio que indica la **ruta** de la imagen (URL o archivo local).
+* **`alt`:** Atributo obligatorio que provee un **texto alternativo** si la imagen no se puede cargar.
+* **Ejemplo:** `<img src="media/logo.png" alt="Logo de la web">`.
+* Una imagen puede ser un enlace si se envuelve en una etiqueta `<a>`.
+
+---
+## 📊 Tablas
+
+---
+
+* Se usan para mostrar **información tabular** (datos en filas y columnas). [cite: 1442]
+* **Importante:** No se deben usar tablas para la maquetación de la página (para eso se usan `<div>` y CSS). [cite: 1449, 1450]
+* **`<table>`:** El contenedor principal de la tabla. [cite: 1453]
+* **`<tr>`:** (Table Row) Define una **fila**. [cite: 1460]
+* **`<td>`:** (Table Data) Define una **celda** de datos. [cite: 1463]
+* **`<th>`:** (Table Header) Define una celda de **encabezado** (resaltada). [cite: 1470]
+* **`<thead>`, `<tbody>`, `<tfoot>`:** Etiquetas semánticas para agrupar las filas de la cabecera, el cuerpo y el pie de la tabla. 
+* **`colspan="2"`:** Hace que una celda se expanda para ocupar 2 columnas. [cite: 1533]
+* **`rowspan="2"`:** Hace que una celda se expanda para ocupar 2 filas. [cite: 1535]
+
+---
+
+## 📋 Formularios
+
+---
+
+* Se usan para **interactuar con el usuario** y permitirle enviar información.
+* El formulario completo se envuelve en la etiqueta **`<form>`**.
+
+### Atributos de `<form>`
+
+* **`action`:** La URL (script o página) a la que se **enviarán los datos**.
+* **`method`:** El método HTTP para enviar los datos.
+    * **`get`:** Envía los datos en la URL (visibles, ej. `...php?nom=Anna`).
+    * **`post`:** Envía los datos de forma oculta en la cabecera HTTP.
+
+### Controles de Formulario Comunes
+
+* **`name`:** Atributo **crucial**. Es el nombre que identifica al dato que se envía (ej. `name="nom"`).
+* **`<label>`:** Etiqueta de texto para un control (mejora la accesibilidad).
+* **`<fieldset>` y `<legend>`:** Agrupan controles relacionados (`<fieldset>`) con un título (`<legend>`).
+* **`<input type="text">`:** Campo de texto de una línea.
+* **`<input type="password">`:** Campo de contraseña (oculta el texto).
+* **`<input type="radio">`:** Botón de opción (permite seleccionar solo uno de un grupo).
+* **`<input type="checkbox">`:** Casilla de verificación (permite seleccionar varios).
+* **`<select>` y `<option>`:** Crean una lista desplegable.
+* **`<textarea>`:** Área para texto de múltiples líneas.
+* **`<input type="submit">`:** Botón que **envía** el formulario.
+* **`<input type="reset">`:** Botón que **borra** los datos del formulario.
+
+---
+
 ### 5.3. Validador HTML del W3C
 
 El W3C (World Wide Web Consortium) es el organismo que define los estándares oficiales de HTML. Para asegurarte de que tu código HTML es correcto, profesional y sigue estos estándares, debes utilizar su validador en línea.
