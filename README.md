@@ -525,11 +525,12 @@ Un **favicon** (icono de favorito) es el pequeño icono (normalmente de 16x16 o 
 
 * **¿Para qué sirve?** Es clave para la imagen de marca (*branding*) y la usabilidad, ya que ayuda a los usuarios a identificar rápidamente tu pestaña entre muchas otras.
 
-* **¿Cómo crearlos?**
-    1.  Crea una versión simplificada y cuadrada de tu logo.
-    2.  Guárdala como `.png` o utiliza un generador en línea (como `favicon.io`) para crear un archivo `.ico` (que ofrece mayor compatibilidad).
-    3.  Añade el archivo al directorio de tu proyecto.
-    4.  Enlázalo dentro de la etiqueta `<head>` de tu HTML:
+### ¿Cómo crearlos?
+
+1.  Crea una versión simplificada y cuadrada de tu logo.
+2.  Guárdala como `.png` o utiliza un generador en línea (como `favicon.io`) para crear un archivo `.ico` (que ofrece mayor compatibilidad).
+3.  Añade el archivo al directorio de tu proyecto.
+4.  Enlázalo dentro de la etiqueta `<head>` de tu HTML:
 
 ```html
 <head>
