@@ -420,7 +420,7 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
 ---
 
-### 🧩 Estructura básica de un documento HTML
+### Estructura básica de un documento HTML
 
 ```html
 <!DOCTYPE html>
@@ -478,7 +478,7 @@ Tienes tres formas principales de comprobar tu código:
 
 ---
 
-## 6. 🚀 Publicar tu Sitio Web con GitHub Pages
+## 6. Publicar tu Sitio Web con GitHub Pages
 
 **GitHub Pages** es un servicio gratuito de GitHub que te permite alojar y publicar sitios web estáticos (es decir, hechos solo con HTML, CSS y JavaScript) directamente desde tu repositorio.
 
@@ -506,7 +506,7 @@ El proceso es muy sencillo y se hace desde la configuración de tu repositorio:
 
 ---
 
-## 3. 🛠️ Otras Herramientas Útiles
+## 3. Otras Herramientas Útiles
 
 ### Font Awesome (Iconos)
 
