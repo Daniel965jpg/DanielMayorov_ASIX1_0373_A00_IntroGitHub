@@ -133,7 +133,7 @@ Para bajar los cambios del repositorio remoto y fusionarlos con tu trabajo local
 ```bash
 git pull
 
-## 🤝 4. Colaboración: Ramas y Pull Requests
+## 4. Colaboración: Ramas y Pull Requests
 
 Esta es la parte más potente de **GitHub**.
 
@@ -141,20 +141,12 @@ Esta es la parte más potente de **GitHub**.
 
 ### Rama (*Branch*)
 
-Una rama es una línea de tiempo paralela de commits.  
-La rama principal se llama `main`.  
---> **Nunca deberías trabajar directamente sobre** `main`.
+Una rama es una línea de tiempo paralela de commits.
+La rama principal se llama `main`.
+
+> **Importante:** Nunca deberías trabajar directamente sobre `main`.
 
 ---
-
-###  Flujo de trabajo típico
-
-1. Crea una rama nueva para cada tarea (por ejemplo: `feature/añadir-formulario`).
-2. Trabaja y haz commits en esa rama.
-3. Cuando termines, abre un **Pull Request (PR)**.
-4. Un PR es una "solicitud para fusionar" tu rama con `main`.
-5. Otras personas pueden revisar tu código, dejar comentarios y aprobarlo.
-6. Una vez aprobado, se fusiona el PR y tu trabajo se incorpora a `main`.
 
 ### Flujo de trabajo típico
 
