@@ -439,17 +439,14 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
 ## La importancia de `index.html`
 
-* Es el **punto de entrada principal** de un sitio web.
-* Los servidores web lo buscan automáticamente cuando un usuario visita la raíz de un dominio (ej. `www.ejemplo.com`).
-* Actúa como la **página de inicio** o portada del sitio.
+El archivo `index.html` es fundamental en cualquier sitio web. Los servidores web buscan automáticamente este archivo cuando un usuario visita la URL raíz de un directorio (ej. `www.ejemplo.com`).
 
-### ¿Por qué es importante?
+### Por qué es importante
 
-* **Página de inicio:** Es la primera página que ven los usuarios.
-* **Navegación:** Suele contener los enlaces a otras secciones.
-* **SEO:** Ayuda a los motores de búsqueda a indexar el sitio.
-* **Compatibilidad:** Es el archivo estándar que esperan los servidores y hostings.
-* **Profesionalismo:** Un sitio sin `index.html` se considera incompleto.
+* **Página de inicio:** `index.html` actúa como la puerta de entrada a tu sitio web, mostrando el contenido inicial que los usuarios verán.
+* **Navegación:** Facilita que los visitantes accedan a otras páginas del sitio mediante enlaces desde esta página principal.
+* **SEO y motores de búsqueda:** Tener un `index.html` correctamente estructurado ayuda a que los motores de búsqueda indexen tu sitio de manera eficiente.
+* **Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo como punto de entrada.
 
 ### Buenas prácticas
 
