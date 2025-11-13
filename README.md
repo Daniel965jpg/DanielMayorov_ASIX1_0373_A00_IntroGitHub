@@ -482,20 +482,20 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
 ## Etiquetas de Texto Principales
 
-* **`<h1>` a `<h6>`:** Encabezados o Títulos. [cite_start]`<h1>` es el más importante y `<h6>` el menos importante. [cite: 1213]
-* [cite_start]**`<p>`:** Define un párrafo. [cite: 1226]
-* [cite_start]**`<em>`:** Para dar énfasis (normalmente se ve en cursiva). [cite: 1235, 1283]
-* [cite_start]**`<strong>`:** Para dar una énfasis fuerte (normalmente se ve en negrita). [cite: 1236, 1283]
-* [cite_start]**`<br/>`:** Inserta un salto de línea forzado. [cite: 1227, 1312]
-* [cite_start]**`<hr/>`:** Crea una línea horizontal separadora. [cite: 1228]
-* [cite_start]**`<blockquote>`:** Se usa para citar un bloque de texto largo. [cite: 1229, 1291]
-* **`<div>`:** Contenedor genérico de **bloque**. [cite_start]Se usa para agrupar y estructurar secciones. [cite: 1231, 1330]
-* **`<span>`:** Contenedor genérico en **línea**. [cite_start]Se usa para agrupar texto o elementos dentro de un bloque. [cite: 1245, 1330]
+* **`<h1>` a `<h6>`:** Encabezados o Títulos. `<h1>` es el más importante y `<h6>` el menos importante. 
+* **`<p>`:** Define un párrafo. 
+* **`<em>`:** Para dar énfasis (normalmente se ve en cursiva). 
+* **`<strong>`:** Para dar una énfasis fuerte (normalmente se ve en negrita). 
+* **`<br/>`:** Inserta un salto de línea forzado. 
+* **`<hr/>`:** Crea una línea horizontal separadora. 
+* **`<blockquote>`:** Se usa para citar un bloque de texto largo.
+* **`<div>`:** Contenedor genérico de **bloque**. Se usa para agrupar y estructurar secciones.
+* **`<span>`:** Contenedor genérico en **línea**. Se usa para agrupar texto o elementos dentro de un bloque.
 
 ### ⚠️ Etiquetas "antiguas" (Evitar)
 
-* [cite_start]No se deben usar etiquetas como `<b>` (negrita) o `<i>` (cursiva), ya que solo definen presentación y no estructura. [cite: 1324, 1325]
-* Para eso se usa CSS. [cite_start]En su lugar, usa `<strong>` y `<em>` que tienen valor semántico (de significado). [cite: 1324, 1326]
+* No se deben usar etiquetas como `<b>` (negrita) o `<i>` (cursiva), ya que solo definen presentación y no estructura.
+* Para eso se usa CSS. En su lugar, usa `<strong>` y `<em>` que tienen valor semántico (de significado).
 
 ---
 ##  Enlaces e Imágenes
@@ -526,15 +526,15 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
 ---
 
-* Se usan para mostrar **información tabular** (datos en filas y columnas). [cite: 1442]
-* **Importante:** No se deben usar tablas para la maquetación de la página (para eso se usan `<div>` y CSS). [cite: 1449, 1450]
-* **`<table>`:** El contenedor principal de la tabla. [cite: 1453]
-* **`<tr>`:** (Table Row) Define una **fila**. [cite: 1460]
-* **`<td>`:** (Table Data) Define una **celda** de datos. [cite: 1463]
-* **`<th>`:** (Table Header) Define una celda de **encabezado** (resaltada). [cite: 1470]
+* Se usan para mostrar **información tabular** (datos en filas y columnas).
+* **Importante:** No se deben usar tablas para la maquetación de la página (para eso se usan `<div>` y CSS).
+* **`<table>`:** El contenedor principal de la tabla.
+* **`<tr>`:** (Table Row) Define una **fila**.
+* **`<td>`:** (Table Data) Define una **celda** de datos.
+* **`<th>`:** (Table Header) Define una celda de **encabezado** (resaltada).
 * **`<thead>`, `<tbody>`, `<tfoot>`:** Etiquetas semánticas para agrupar las filas de la cabecera, el cuerpo y el pie de la tabla. 
-* **`colspan="2"`:** Hace que una celda se expanda para ocupar 2 columnas. [cite: 1533]
-* **`rowspan="2"`:** Hace que una celda se expanda para ocupar 2 filas. [cite: 1535]
+* **`colspan="2"`:** Hace que una celda se expanda para ocupar 2 columnas.
+* **`rowspan="2"`:** Hace que una celda se expanda para ocupar 2 filas.
 
 ---
 
