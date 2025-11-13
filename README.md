@@ -261,17 +261,19 @@ No es un lenguaje de programación, sino un lenguaje de marcado, que indica al n
 ### HTML Semántico
 Utiliza etiquetas como `<header>`, `<main>`, `<footer>`, `<nav>`, `<section>` y `<article>` para dar significado a la estructura.
 
-Esto es vital para:
-* **Accesibilidad:** los lectores de pantalla pueden interpretar mejor la página.
-* **SEO:** los motores de búsqueda como Google entienden mejor el contenido de tu web.
-### Ejemplos de uso semántico:
+### Importancia del HTML Semántico
 
-* `<nav>` &rarr; barra de navegación
-* `<section>` &rarr; sección del contenido
-* `<article>` &rarr; artículo independiente
-* `<footer>` &rarr; pie de página
+* **Esto es vital para:**
+    * **Accesibilidad:** los lectores de pantalla pueden interpretar mejor la página.
+    * **SEO:** los motores de búsqueda como Google entienden mejor el contenido de tu web.
 
-### Consejos adicionales
-* Mantén tu HTML limpio y organizado con sangrías consistentes.
-* Usa comentarios: `` para documentar tu código.
-* Combina HTML con CSS para diseño y estilo y con JavaScript para interactividad. (que aun no hemos hecho)
+* **Ejemplos de uso semántico:**
+    * `<nav>` &rarr; barra de navegación
+    * `<section>` &rarr; sección del contenido
+    * `<article>` &rarr; artículo independiente
+    * `<footer>` &rarr; pie de página
+
+* **Consejos adicionales:**
+    * Mantén tu HTML limpio y organizado con sangrías consistentes.
+    * Usa comentarios: `` para documentar tu código.
+    * Combina HTML con CSS para diseño y estilo y con JavaScript para interactividad (que aun no hemos hecho).
