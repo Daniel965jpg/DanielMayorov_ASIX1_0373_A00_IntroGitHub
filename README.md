@@ -282,6 +282,12 @@ Para escribir bloques de código de varias líneas, se utilizan tres tildes inve
 
 1. Crea una rama nueva para cada tarea (por ejemplo: `feature/añadir-formulario`).
 2. Trabaja y haz commits en esa rama.
+# HTML Semántico y la importancia de `index.html`
+
+---
+
+## Ejemplo básico de HTML
+
 ```html
 <!DOCTYPE html>
 <html lang="es">
@@ -289,11 +295,7 @@ Para escribir bloques de código de varias líneas, se utilizan tres tildes inve
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Título de la Página (aparece en la pestaña)</title>
-    
-    <!-- Vincular hoja de estilos CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Ícono de la página -->
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
@@ -313,80 +315,80 @@ Para escribir bloques de código de varias líneas, se utilizan tres tildes inve
     </footer>
 </body>
 </html>
+```
 
-### HTML Semántico
-Utiliza etiquetas como `<header>`, `<main>`, `<footer>`, `<nav>`, `<section>` y `<article>` para dar significado a la estructura.
+---
+
+## HTML Semántico
+
+Utiliza etiquetas como `<header>`, `<main>`, `<footer>`, `<nav>`, `<section>` y `<article>` para dar **significado** a la estructura.
 
 ### Importancia del HTML Semántico
 
 **Esto es vital para:**
+
 * **Accesibilidad:** los lectores de pantalla pueden interpretar mejor la página.
 * **SEO:** los motores de búsqueda como Google entienden mejor el contenido de tu web.
 
 **Ejemplos de uso semántico:**
-* `<nav>` &rarr; barra de navegación
-* `<section>` &rarr; sección del contenido
-* `<article>` &rarr; artículo independiente
-* `<footer>` &rarr; pie de página
+
+* `<nav>` → barra de navegación
+* `<section>` → sección del contenido
+* `<article>` → artículo independiente
+* `<footer>` → pie de página
 
 **Consejos adicionales:**
+
 * Mantén tu HTML limpio y organizado con sangrías consistentes.
-* Usa comentarios: // para documentar tu código.
-* Combina HTML con CSS para diseño y estilo y con JavaScript para interactividad (que aun no hemos hecho).
+* Usa comentarios: `<!-- comentario -->` para documentar tu código.
+* Combina HTML con CSS para diseño y estilo y con JavaScript para interactividad.
 
-## 5.3. La importancia de `index.html`
+---
 
+## La importancia de `index.html`
 
-El archivo `index.html` es fundamental en cualquier sitio web. Los servidores web están configurados para buscar automáticamente este archivo cuando un usuario visita la URL raíz de un directorio (ej. `www.ejemplo.com`).
-
+El archivo `index.html` es fundamental en cualquier sitio web. Los servidores web buscan automáticamente este archivo cuando un usuario visita la URL raíz de un directorio (ej. `www.ejemplo.com`).
 
 ### Por qué es importante
 
-
-- **Página de inicio:** `index.html` actúa como la puerta de entrada a tu sitio web, mostrando el contenido inicial que los usuarios verán.
-- **Navegación:** Facilita que los visitantes accedan a otras páginas del sitio mediante enlaces desde esta página principal.
-- **SEO y motores de búsqueda:** Tener un `index.html` correctamente estructurado ayuda a que los motores de búsqueda indexen tu sitio de manera eficiente.
-- **Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo como punto de entrada.
-
+* **Página de inicio:** `index.html` actúa como la puerta de entrada a tu sitio web, mostrando el contenido inicial que los usuarios verán.
+* **Navegación:** Facilita que los visitantes accedan a otras páginas del sitio mediante enlaces desde esta página principal.
+* **SEO y motores de búsqueda:** Tener un `index.html` correctamente estructurado ayuda a que los motores de búsqueda indexen tu sitio de manera eficiente.
+* **Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo como punto de entrada.
 
 ### Buenas prácticas
 
-
-- Mantén la estructura limpia: `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` correctamente anidados.
-- Incluye títulos (`<title>`), meta etiquetas (`<meta>`), y enlaces a hojas de estilo o scripts.
-- Usa contenido relevante y jerarquía clara de encabezados (`<h1>`, `<h2>`, `<h3>`).
-- Optimiza el rendimiento: minimiza scripts y CSS innecesarios para que la página cargue rápido.
-- Incluye accesibilidad: etiquetas semánticas y atributos como `alt` en imágenes.
-
+* Mantén la estructura limpia: `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` correctamente anidados.
+* Incluye títulos (`<title>`), meta etiquetas (`<meta>`), y enlaces a hojas de estilo o scripts.
+* Usa contenido relevante y jerarquía clara de encabezados (`<h1>`, `<h2>`, `<h3>`).
+* Optimiza el rendimiento: minimiza scripts y CSS innecesarios para que la página cargue rápido.
+* Incluye accesibilidad: etiquetas semánticas y atributos como `alt` en imágenes.
 
 ### Ejemplo básico de `index.html`
-
 
 ```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Página Principal</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Principal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1>Bienvenido a Mi Sitio</h1>
-</header>
+    <header>
+        <h1>Bienvenido a Mi Sitio</h1>
+    </header>
 
+    <main>
+        <section>
+            <h2>Sobre Nosotros</h2>
+            <p>Esta es la página de inicio donde presentamos nuestro sitio web.</p>
+        </section>
+    </main>
 
-<main>
-<section>
-<h2>Sobre Nosotros</h2>
-<p>Esta es la página de inicio donde presentamos nuestro sitio web.</p>
-</section>
-</main>
-
-
-<footer>
-<p>&copy; 2025 Mi Sitio Web.</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web.</p>
+    </footer>
 </body>
 </html>
