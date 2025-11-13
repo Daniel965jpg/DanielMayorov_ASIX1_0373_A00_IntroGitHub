@@ -82,151 +82,111 @@ El flujo es:
     * Es un cliente oficial de GitHub con una interfaz gráfica. Es muy útil si prefieres no usar el terminal para todo, ya que simplifica visualmente acciones como clonar, subir cambios o crear ramas.
 
     ---------------
+# Git y Fundamentos Web
+
+
+---
+
+
 ## 3. Empezando un Proyecto
+
 
 Un **repositorio** (o *repo*) es simplemente una carpeta de proyecto que está siendo rastreada por **Git**.
 
+
 ---
+
 
 ### 3.1. Opción 1: Clonar un Repositorio Existente (la más común)
 
+
 Clonar significa descargar una copia completa de un proyecto existente en **GitHub** (incluyendo todo su historial) a tu ordenador.
-1. **Busca el botón verde “Code”** en el repositorio de GitHub y copia la URL HTTPS.  
-   Ejemplo:  
-   `https://github.com/usuario/nombre-del-repo.git`
 
-2. **Clona el repositorio** ejecutando en tu terminal:
-   ```bash
-   git clone https://github.com/usuario/nombre-del-repo.git
-   
-3. **Acede a la carpeta creada**:
-   cd nombre-del-repo
 
+1. **Busca el botón verde “Code”** en el repositorio de GitHub y copia la URL HTTPS.
+Ejemplo: `https://github.com/usuario/nombre-del-repo.git`
+
+
+2. **Clona el repositorio**:
+```bash
+git clone https://github.com/usuario/nombre-del-repo.git
+```
+
+
+3. **Accede a la carpeta creada**:
+```bash
+cd nombre-del-repo
+```
+---
 
 ### 3.2. Opción 2: Crear un Repositorio Local Nuevo (desde cero)
 
+
 Si estás empezando un proyecto nuevo desde tu ordenador:
 
-1.  **Crea una carpeta de proyecto y entra en ella:**
-    ```bash
-    mkdir mi-proyecto
-    cd mi-proyecto
-    ```
 
-2.  **Inicializa Git dentro de la carpeta:**
-    ```bash
-    git init
-    ```
+1. **Crea una carpeta de proyecto**:
+```bash
+mkdir mi-proyecto
+cd mi-proyecto
+```
 
-3.  **Haz tu primer commit:**
-    ```bash
-    git add .
-    git commit -m "Commit inicial"
-    ```
+
+2. **Inicializa Git dentro de la carpeta**:
+```bash
+git init
+```
+
+
+3. **Haz tu primer commit**:
+```bash
+git add .
+git commit -m "Commit inicial"
+```
+
 
 ---
+
 
 ### 3.3. Sincronizar Cambios
 
-Para bajar los cambios del repositorio remoto y fusionarlos con tu trabajo local, usa:
 
+Para bajar los cambios del repositorio remoto y fusionarlos con tu trabajo local, usa:
 ```bash
 git pull
+```
+
+
+---
+
 
 ## 4. Colaboración: Ramas y Pull Requests
 
+
 Esta es la parte más potente de **GitHub**.
 
+
 ---
+
 
 ### Rama (*Branch*)
 
-Una rama es una línea de tiempo paralela de commits.
-La rama principal se llama `main`.
+
+Una **rama** es una línea de tiempo paralela de commits. La rama principal se llama `main`.
+
 
 > **Importante:** Nunca deberías trabajar directamente sobre `main`.
 
+
 ---
+
 
 ### Flujo de trabajo típico
 
-1.  Crea una rama nueva para cada tarea (por ejemplo: `feature/añadir-formulario`).
-2.  Trabaja y haz commits en esa rama.
-3.  Cuando termines, abre un **Pull Request (PR)**.
-4.  Un PR es una "solicitud para fusionar" tu rama con `main`.
-5.  Otras personas pueden revisar tu código, dejar comentarios y aprobarlo.
-6.  Una vez aprobado, se fusiona el PR y tu trabajo se incorpora a `main`.
 
-### Ejemplo práctico
-
-1.  **Asegúrate de que estás en `main` y tienes la última versión:**
-    ```bash
-    git checkout main
-    git pull
-    ```
-
-2.  **Crea y cámbiate a una nueva rama:**
-    ```bash
-    git checkout -b feature/nuevo-formulario
-    ```
-
-3.  **Haz tu trabajo (editar, añadir, commitear):**
-    ```bash
-    git add .
-    git commit -m "Añade formulario de contacto"
-    ```
-
-4.  **Sube tu nueva rama a GitHub:**
-    ```bash
-    git push -u origin feature/nuevo-formulario
-    ```
-
----
-
-Luego, ve a **GitHub**: la plataforma detectará la nueva rama y te mostrará un botón para **"Crear un Pull Request"**.
-
-> ✨ **Consejo:** Trabaja siempre en ramas separadas para mantener tu `main` limpio y estable.
-## 5. Fundamentos Web
-
----
-
-### 5.1. Markdown (`.md`)
-
-Markdown es el lenguaje con el que se escriben archivos como los **README.md**.  
-Es una **sintaxis sencilla** para formatear texto plano, ideal para documentación, blogs o notas técnicas.
-
-#### Sintaxis básica de Markdown
-
-```markdown
-# Título H1
-## Título H2
-### Título H3
-
-**Texto en negrita**
-*Texto en cursiva*
-`Código en línea`
-
-- Elemento de lista 1
-- Elemento de lista 2
-
-> Esto es un texto citado (blockquote).
-
-[Esto es un enlace a Google](https://www.google.com)
-
-![Esto es una imagen](ruta/a/la/imagen.png)
-💡 ### Tips adicionales:
-
-* Los bloques de código se indican con tres tildes invertidas (```) o con indentación de 4 espacios.
-* Se pueden crear listas anidadas utilizando espacios o tabulaciones.
-* Para enlaces relativos a tu proyecto puedes usar rutas locales: `[Archivo](docs/archivo.md)`
-* Las imágenes también pueden tener rutas locales o URLs absolutas.
-
-## 5.2. HTML (.html)
-HTML (Hyper Text Markup Language) da estructura a una página web.
-
-No es un lenguaje de programación, sino un lenguaje de marcado, que indica al navegador cómo mostrar contenido.
-
-### Estructura básica de una página HTML (HTML5 Boilerplate)
+1. Crea una rama nueva para cada tarea (por ejemplo: `feature/añadir-formulario`).
+2. Trabaja y haz commits en esa rama.
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
