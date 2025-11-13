@@ -82,25 +82,22 @@ El flujo es:
     * Es un cliente oficial de GitHub con una interfaz gráfica. Es muy útil si prefieres no usar el terminal para todo, ya que simplifica visualmente acciones como clonar, subir cambios o crear ramas.
 
     ---------------
+## 3. Empezando un Proyecto
 
 Un repositorio ("repo") es simplemente una carpeta de proyecto que está siendo rastreada por Git.
 
-### 3.1. Creación de un Repositorio Nuevo
-
-Tienes tres caminos principales:
-
-### Opción 1: Clonar un Repositorio Existente (El más común)
+### 3.1. Opción 1: Clonar un Repositorio Existente (El más común)
 
 Clonar descarga una copia completa de un proyecto existente en GitHub (incluyendo todo el historial) a tu ordenador.
 
-
+```bash
 # Busca el botón verde "Code" en GitHub y copia la URL HTTPS
 git clone [https://github.com/usuario/nombre-del-repo.git](https://github.com/usuario/nombre-del-repo.git)
 
 # Esto crea una nueva carpeta "nombre-del-repo". Entra en ella:
 cd nombre-del-repo
 
-### Opción 2: Crear un Repositorio Local Nuevo (desde cero)
+### 3.2. Opción 2: Crear un Repositorio Local Nuevo (desde cero)
 
 Si empiezas un proyecto nuevo desde tu ordenador.
 
@@ -115,14 +112,19 @@ git init
 git add .
 git commit -m "Commit inicial"
 
+### 3.3. Sincronizar Cambios
+
 Para bajar los cambios del remoto y fusionarlos con nuestro trabajo el comando es:
+
+```bash
 git pull
 
 ## 4. Colaboración: Ramas y Pull Requests
 
 Esta es la parte más potente de GitHub.
 
-* **Rama (Branch):** Una rama es una línea de tiempo paralela de commits. La rama principal se llama `main`. **Nunca se debería trabajar directamente sobre `main`**.
+* **Rama (Branch):** Una rama es una línea de tiempo paralela de commits. La rama principal se llama `main`. **Nunca se debería trabajar directamente sobre** `main`.
+
 * **Flujo de trabajo:**
     1.  Creas una rama nueva para cada tarea (ej. `feature/añadir-formulario`).
     2.  Trabajas y haces commits en esa rama.
