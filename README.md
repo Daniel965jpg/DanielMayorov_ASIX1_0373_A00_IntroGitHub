@@ -88,37 +88,49 @@ Un **repositorio** (o *repo*) es simplemente una carpeta de proyecto que está s
 
 ---
 
-
 ### 3.1. Opción 1: Clonar un Repositorio Existente (la más común)
 
-Clonar descarga una copia completa de un proyecto existente en GitHub (incluyendo todo su historial) a tu ordenador.
+Clonar significa descargar una copia completa de un proyecto existente en **GitHub** (incluyendo todo su historial) a tu ordenador.
+1. **Busca el botón verde “Code”** en el repositorio de GitHub y copia la URL HTTPS.  
+   Ejemplo:  
+   `https://github.com/usuario/nombre-del-repo.git`
 
-```bash
-# 1. Busca el botón verde "Code" en GitHub y copia la URL HTTPS
-git clone https://github.com/usuario/nombre-del-repo.git
+2. **Clona el repositorio** ejecutando en tu terminal:
+   ```bash
+   git clone https://github.com/usuario/nombre-del-repo.git
+   
+3. **Acede a la carpeta creada**:
+   cd nombre-del-repo
 
-# 2. Esto crea una nueva carpeta "nombre-del-repo". Entra en ella:
-cd nombre-del-repo
 
 ### 3.2. Opción 2: Crear un Repositorio Local Nuevo (desde cero)
 
 Si estás empezando un proyecto nuevo desde tu ordenador:
 
-# 1. Crea tu carpeta de proyecto
-mkdir mi-proyecto
-cd mi-proyecto
+1.  **Crea una carpeta de proyecto y entra en ella:**
+    ```bash
+    mkdir mi-proyecto
+    cd mi-proyecto
+    ```
 
-# 2. Inicializa Git dentro de esta carpeta
-git init
+2.  **Inicializa Git dentro de la carpeta:**
+    ```bash
+    git init
+    ```
 
-# 3. Ahora Git está observando. Haz tu primer commit:
-git add .
-git commit -m "Commit inicial"
+3.  **Haz tu primer commit:**
+    ```bash
+    git add .
+    git commit -m "Commit inicial"
+    ```
+
+---
 
 ### 3.3. Sincronizar Cambios
 
-Para bajar los cambios del remoto y fusionarlos con tu trabajo local, usa:
+Para bajar los cambios del repositorio remoto y fusionarlos con tu trabajo local, usa:
 
+```bash
 git pull
 
 ## 🤝 4. Colaboración: Ramas y Pull Requests
