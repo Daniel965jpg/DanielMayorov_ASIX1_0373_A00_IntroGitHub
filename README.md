@@ -440,3 +440,41 @@ Un documento HTML se compone de una jerarquía de etiquetas que definen la estru
     </footer>
 </body>
 </html>
+
+## 5.3. La importancia de `index.html`
+
+---
+
+El archivo **`index.html`** es el **punto de entrada principal** de cualquier sitio web.  
+Cuando un usuario accede a la dirección raíz de un dominio (por ejemplo: `https://www.ejemplo.com`), el servidor web busca automáticamente un archivo llamado **`index.html`** para mostrar su contenido.
+
+Este comportamiento hace que `index.html` actúe como la **página de inicio** o **portada** del sitio web.
+
+---
+
+### 🔍 ¿Por qué es importante?
+
+- **Página de inicio:** Es la primera página que los usuarios ven al visitar tu sitio.  
+- **Navegación:** Suele contener enlaces hacia las demás secciones del sitio.  
+- **SEO (Optimización en buscadores):** Un `index.html` bien estructurado ayuda a los motores de búsqueda (como Google) a indexar correctamente tu sitio.  
+- **Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo por defecto para cargar la web.  
+- **Profesionalismo:** Un sitio sin `index.html` se considera incompleto o mal configurado.
+
+---
+
+### 🧾 Buenas prácticas
+
+- Usa siempre la estructura básica de HTML5:
+  ```html
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mi Página Principal</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <!-- Contenido -->
+  </body>
+  </html>
