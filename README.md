@@ -32,11 +32,12 @@ KASJNDjsdnLKSJDnksladnlkANDKJAsndKLASJDNkljsndKLJSDNkljnsdlkJNDkljndsklJNDKLjndL
 ![Alt text](./imagen%201%20jpg.webp "Imagen de un archivo") 
 
 
-| *Jugador* | *Equipo* | *Nombre* |
-|-----:-----|------:-------|---------:-----------|
-| 32 | Lakers | Magic Johnson |
-| 33 | Celtics | Boston Celtics |
-| 23 | Bulls | Michael "air" Jordan |
+| Jugador | Equipo  | Nombre               |
+| ------- | ------- | -------------------- |
+| 32      | Lakers  | Magic Johnson        |
+| 33      | Celtics | Boston Celtics       |
+| 23      | Bulls   | Michael "Air" Jordan |
+
 
 # Apuntes Completos: Git, Github y Fundamentos Web.
 ## 1. Conceptos Clave: Git vs. GitHub
@@ -441,3 +442,92 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 </body>
 </html>
 ```
+### 5.3. Validador HTML del W3C
+
+El W3C (World Wide Web Consortium) es el organismo que define los estándares oficiales de HTML. Para asegurarte de que tu código HTML es correcto, profesional y sigue estos estándares, debes utilizar su validador en línea.
+
+Usar esta herramienta es fundamental por varias razones:
+
+* **Encuentra errores:** Detecta sintaxis incorrecta, como etiquetas mal cerradas (`<p>...</div>`), atributos obsoletos o elementos obligatorios que faltan (como el atributo `alt` en las imágenes `<img>`).
+* **Mejora la compatibilidad (Cross-Browser):** Un HTML válido asegura que tu página se vea y funcione de manera similar en todos los navegadores (Chrome, Firefox, Safari, etc.).
+* **Ayuda al SEO:** A los motores de búsqueda (como Google) les es más fácil entender y clasificar una página con código limpio y bien estructurado.
+* **Base para la accesibilidad (A11y):** Un HTML semántico y válido es el primer paso para que las tecnologías de asistencia (como lectores de pantalla) puedan interpretar tu web correctamente.
+
+### ¿Cómo se usa el validador?
+
+El validador es una herramienta en línea gratuita a la que puedes acceder aquí:
+**[validator.w3.org](https://validator.w3.org/)**
+
+
+
+Tienes tres formas principales de comprobar tu código:
+
+1.  **Validar por URI (URL):** Pegas la URL de tu sitio web si ya está publicado (ej. `https://www.ejemplo.com`).
+2.  **Validar por subida de archivo (File Upload):** Subes tu archivo `index.html` directamente desde tu ordenador.
+3.  **Validar por entrada directa (Direct Input):** Copias todo tu código HTML y lo pegas directamente en la caja de texto del validador.
+
+> **Objetivo:** Tu meta debería ser que el validador muestre un mensaje verde de éxito y reporte **"0 Errors"**. No te preocupes tanto por los "Warnings" (advertencias) al principio, pero los **"Errors" (errores) son obligatorios de corregir.**
+
+---
+
+## 6. 🚀 Publicar tu Sitio Web con GitHub Pages
+
+**GitHub Pages** es un servicio gratuito de GitHub que te permite alojar y publicar sitios web estáticos (es decir, hechos solo con HTML, CSS y JavaScript) directamente desde tu repositorio.
+
+Es la forma más rápida de poner tu proyecto en línea y compartirlo con el mundo.
+
+### Cómo activar GitHub Pages
+
+El proceso es muy sencillo y se hace desde la configuración de tu repositorio:
+
+1.  En tu repositorio de GitHub, ve a la pestaña principal y haz clic en **"Settings"** (Configuración).
+    
+2.  En el menú lateral izquierdo, busca y haz clic en **"Pages"**.
+3.  En la sección "Build and deployment" (Construcción y despliegue), mira la opción **"Source"** (Fuente).
+4.  Asegúrate de que esté seleccionada la opción **"Deploy from a branch"** (Desplegar desde una rama).
+5.  En el menú desplegable, elige la rama que contiene tu código final (normalmente será **`main`**).
+6.  Deja la carpeta como `/(root)` y haz clic en **"Save"** (Guardar).
+
+¡Y ya está! Después de unos segundos (a veces puede tardar un minuto), GitHub procesará tus archivos y publicará tu sitio.
+
+> **Importante:** Tu página estará disponible públicamente en una URL con este formato. Podrás ver el enlace exacto en la misma página de "Settings" una vez que se publique.
+>
+> `https://tu-usuario.github.io/nombre-del-repositorio/`
+>
+> (Recuerda que para que esto funcione, tu archivo HTML principal **debe llamarse `index.html`**).
+
+---
+
+## 3. 🛠️ Otras Herramientas Útiles
+
+### Font Awesome (Iconos)
+
+Es un popular conjunto de herramientas de iconos y fuentes basado en CSS. Te permite añadir fácilmente miles de iconos vectoriales (escalables y personalizables con CSS) a tu página web con una simple línea de código.
+
+> **Ejemplo de uso:**
+> ```html
+> <i class="fas fa-rocket"></i>
+> ```
+> (Esto mostraría un icono de cohete 🚀).
+
+### Favicons
+
+Un **favicon** (icono de favorito) es el pequeño icono (normalmente de 16x16 o 32x32 píxeles) que aparece en la pestaña del navegador, justo al lado del título de la página.
+
+
+* **¿Para qué sirve?** Es clave para la imagen de marca (*branding*) y la usabilidad, ya que ayuda a los usuarios a identificar rápidamente tu pestaña entre muchas otras.
+
+* **¿Cómo crearlos?**
+    1.  Crea una versión simplificada y cuadrada de tu logo.
+    2.  Guárdala como `.png` o utiliza un generador en línea (como `favicon.io`) para crear un archivo `.ico` (que ofrece mayor compatibilidad).
+    3.  Añade el archivo al directorio de tu proyecto.
+    4.  Enlázalo dentro de la etiqueta `<head>` de tu HTML:
+
+```html
+<head>
+  <meta charset="UTF-8">
+  <title>Título de mi Página</title>
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
