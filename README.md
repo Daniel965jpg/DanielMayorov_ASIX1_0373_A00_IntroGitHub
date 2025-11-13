@@ -396,7 +396,7 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
 ---
 
-## 5. Fundamentos Web
+### 5. Fundamentos Web
 
 ---
 
@@ -406,15 +406,8 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 * Se utiliza para **crear la estructura y el contenido** de una página web.
 * No es un lenguaje de programación, sino un **lenguaje descriptivo** que indica al navegador cómo mostrar el contenido.
 * Actúa como el **esqueleto** de cualquier sitio web.
-* Define elementos como:
-    * Títulos (`<h1>` a `<h6>`)
-    * Párrafos (`<p>`)
-    * Enlaces (`<a>`)
-    * Imágenes (`<img>`)
-    * Listas (`<ul>`, `<ol>`, `<li>`)
-    * Tablas (`<table>`, `<tr>`, `<td>`)
-    * Formularios (`<form>`, `<input>`, `<button>`) 
-
+* Define elementos como: Títulos (`<h1>` a `<h6>`), Párrafos (`<p>`), Enlaces (`<a>`), Imágenes (`<img>`), Listas (`<ul>`, `<ol>`, `<li>`), Tablas (`<table>`, `<tr>`, `<td>`) y Formularios (`<form>`, `<input>`, `<button>`).
+    
 ---
 
 ### 🧩 Estructura básica de un documento HTML
