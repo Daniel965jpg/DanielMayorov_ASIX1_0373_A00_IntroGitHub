@@ -174,6 +174,7 @@ Esta es la parte más potente de **GitHub**.
 
 
 Una **rama** es una línea de tiempo paralela de commits. La rama principal se llama `main`.
+
 ### Flujo de trabajo
 
 1. Crea una rama nueva para cada tarea (ej. `feature/añadir-formulario`).
@@ -185,23 +186,30 @@ Una **rama** es una línea de tiempo paralela de commits. La rama principal se l
 
 > **Importante:** Nunca deberías trabajar directamente sobre `main`.
 
-# 1. Asegúrate de que estás en "main" y tienes la última versión
-git checkout main
-git pull
+1.  **Asegúrate de que estás en "main" y tienes la última versión**
+    ```bash
+    git checkout main
+    git pull
+    ```
 
-# 2. Crea y cámbiate a una nueva rama
-git checkout -b feature/nuevo-formulario
+2.  **Crea y cámbiate a una nueva rama**
+    ```bash
+    git checkout -b feature/nuevo-formulario
+    ```
 
-# 3. Haz tu trabajo... (edita, 'git add', 'git commit')
-# ...
-git add .
-git commit -m "Añade formulario de contacto"
+3.  **Haz tu trabajo... (edita, 'git add', 'git commit')**
+    ```bash
+    # ...
+    git add .
+    git commit -m "Añade formulario de contacto"
+    ```
 
-# 4. Sube tu *nueva rama* a GitHub
-git push -u origin feature/nuevo-formulario
+4.  **Sube tu *nueva rama* a GitHub**
+    ```bash
+    git push -u origin feature/nuevo-formulario
+    ```
 
-# 5. Ve a GitHub: la plataforma detectará la nueva rama
-#    y te mostrará un botón para "Crear un Pull Request".
+5.  **Ve a GitHub: la plataforma detectará la nueva rama y te mostrará un botón para "Crear un Pull Request".**
 
 ---
 # 5. Fundamentos Web
