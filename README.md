@@ -366,6 +366,7 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
 ### Ejemplo básico de `index.html`
 
+
 ```html
 <!DOCTYPE html>
 <html lang="es">
@@ -389,6 +390,53 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
     <footer>
         <p>&copy; 2025 Mi Sitio Web.</p>
+    </footer>
+</body>
+</html>
+
+## 5. Fundamentos Web
+
+---
+
+### 5.2. ¿Qué es HTML?
+
+HTML (**HyperText Markup Language**) es el **lenguaje estándar de marcado** que se utiliza para **crear la estructura y el contenido de una página web**.  
+No es un lenguaje de programación, sino un lenguaje **descriptivo**, que indica al navegador cómo debe mostrarse cada parte del contenido.
+
+**En otras palabras:** HTML es el esqueleto de cualquier sitio web.  
+Define elementos como títulos, párrafos, enlaces, imágenes, listas, tablas, formularios, y más.
+
+---
+
+### 🧩 Estructura básica de un documento HTML
+
+Un documento HTML se compone de una jerarquía de etiquetas que definen la estructura del contenido.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la Página (aparece en la pestaña)</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Mi Sitio Web</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre mí</h2>
+            <p>Esto es un párrafo con un <a href="contacto.html">enlace</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Nombre.</p>
     </footer>
 </body>
 </html>
