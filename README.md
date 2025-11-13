@@ -156,26 +156,41 @@ La rama principal se llama `main`.
 5. Otras personas pueden revisar tu código, dejar comentarios y aprobarlo.
 6. Una vez aprobado, se fusiona el PR y tu trabajo se incorpora a `main`.
 
+### Flujo de trabajo típico
+
+1.  Crea una rama nueva para cada tarea (por ejemplo: `feature/añadir-formulario`).
+2.  Trabaja y haz commits en esa rama.
+3.  Cuando termines, abre un **Pull Request (PR)**.
+4.  Un PR es una "solicitud para fusionar" tu rama con `main`.
+5.  Otras personas pueden revisar tu código, dejar comentarios y aprobarlo.
+6.  Una vez aprobado, se fusiona el PR y tu trabajo se incorpora a `main`.
+
 ### Ejemplo práctico
 
-1. Asegúrate de que estás en `main` y tienes la última versión.  
-   → `git checkout main`  
-   → `git pull`
+1.  **Asegúrate de que estás en `main` y tienes la última versión:**
+    ```bash
+    git checkout main
+    git pull
+    ```
 
-2. Crea y cámbiate a una nueva rama.  
-   → `git checkout -b feature/nuevo-formulario`
+2.  **Crea y cámbiate a una nueva rama:**
+    ```bash
+    git checkout -b feature/nuevo-formulario
+    ```
 
-3. Haz tu trabajo (editar, añadir, commitear).  
-   → `git add .`  
-   → `git commit -m "Añade formulario de contacto"`
+3.  **Haz tu trabajo (editar, añadir, commitear):**
+    ```bash
+    git add .
+    git commit -m "Añade formulario de contacto"
+    ```
 
-4. Sube tu nueva rama a GitHub.  
-   → `git push -u origin feature/nuevo-formulario`
+4.  **Sube tu nueva rama a GitHub:**
+    ```bash
+    git push -u origin feature/nuevo-formulario
+    ```
 
 ---
 
-Luego, ve a **GitHub**: la plataforma detectará la nueva rama  
-y te mostrará un botón para **"Crear un Pull Request"**.
+Luego, ve a **GitHub**: la plataforma detectará la nueva rama y te mostrará un botón para **"Crear un Pull Request"**.
 
-**Consejo:** Trabaja siempre en ramas separadas para mantener tu `main` limpio y estable.
-
+> ✨ **Consejo:** Trabaja siempre en ramas separadas para mantener tu `main` limpio y estable.
