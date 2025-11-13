@@ -113,3 +113,39 @@ git init
 # Ahora Git está observando. Haz tu primer commit:
 git add .
 git commit -m "Commit inicial"
+
+Para bajar los cambios del remoto y fusiónarlos con nuestro trabajo el comando es:
+git pull
+
+## 4. Colaboración: Ramas y Pull Requests
+
+Esta es la parte más potente de GitHub.
+
+* **Rama (Branch):** Una rama es una línea de tiempo paralela de commits. La rama principal se llama `main`. **Nunca se debería trabajar directamente sobre `main`**.
+* **Flujo de trabajo:**
+    1.  Creas una rama nueva para cada tarea (ej. `feature/añadir-formulario`).
+    2.  Trabajas y haces commits en esa rama.
+    3.  Cuando terminas, abres un **Pull Request (PR)**.
+    4.  Un PR es una "solicitud para fusionar" tu rama con `main`.
+    5.  Otras personas pueden revisar tu código, dejar comentarios y, finalmente, aprobarlo.
+    6.  Una vez aprobado, fusionas el PR y tu trabajo se incorpora a `main`.
+
+```bash
+# 1. Asegúrate de que estás en "main" y tienes la última versión
+git checkout main
+git pull
+
+# 2. Crea y cámbiate a una nueva rama
+git checkout -b feature/nuevo-formulario
+
+# 3. Haz tu trabajo... (edita, 'git add', 'git commit')
+# ...
+git add .
+git commit -m "Añade formulario de contacto"
+
+# 4. Sube tu *nueva rama* a GitHub
+git push -u origin feature/nuevo-formulario
+
+# 5. Ve a GitHub: la plataforma detectará la nueva rama
+#    y te mostrará un botón para "Crear un Pull Request".
+
