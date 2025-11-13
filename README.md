@@ -93,7 +93,7 @@ Tienes tres caminos principales:
 
 Clonar descarga una copia completa de un proyecto existente en GitHub (incluyendo todo el historial) a tu ordenador.
 
-```bash
+
 # Busca el botón verde "Code" en GitHub y copia la URL HTTPS
 git clone [https://github.com/usuario/nombre-del-repo.git](https://github.com/usuario/nombre-del-repo.git)
 
@@ -149,3 +149,4 @@ git push -u origin feature/nuevo-formulario
 
 # 5. Ve a GitHub: la plataforma detectará la nueva rama
 #    y te mostrará un botón para "Crear un Pull Request".
+```bash 
