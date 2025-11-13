@@ -396,23 +396,24 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
 ---
 
-### 5. Fundamentos Web
+## 5. Fundamentos Web
+
+---
 
 ### 5.2. ¿Qué es HTML?
 
-HTML (**HyperText Markup Language**) es el **lenguaje estándar de marcado** utilizado para **crear la estructura y el contenido de una página web**.  
-No es un lenguaje de programación, sino un **lenguaje descriptivo**, que indica al navegador cómo debe mostrarse cada parte del contenido.
-
-**En otras palabras:** HTML es el **esqueleto de cualquier sitio web**.  
-Define elementos como:
-
-- Títulos (`<h1>` a `<h6>`)
-- Párrafos (`<p>`)
-- Enlaces (`<a>`)
-- Imágenes (`<img>`)
-- Listas (`<ul>`, `<ol>`, `<li>`)
-- Tablas (`<table>`, `<tr>`, `<td>`)
-- Formularios (`<form>`, `<input>`, `<button>`)
+* HTML (**HyperText Markup Language**) es el **lenguaje estándar de marcado**.
+* Se utiliza para **crear la estructura y el contenido** de una página web.
+* No es un lenguaje de programación, sino un **lenguaje descriptivo** que indica al navegador cómo mostrar el contenido.
+* Actúa como el **esqueleto** de cualquier sitio web.
+* Define elementos como:
+    * Títulos (`<h1>` a `<h6>`)
+    * Párrafos (`<p>`)
+    * Enlaces (`<a>`)
+    * Imágenes (`<img>`)
+    * Listas (`<ul>`, `<ol>`, `<li>`)
+    * Tablas (`<table>`, `<tr>`, `<td>`)
+    * Formularios (`<form>`, `<input>`, `<button>`) 
 
 ---
 
