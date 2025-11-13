@@ -393,6 +393,7 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
     </footer>
 </body>
 </html>
+```
 
 ---
 
@@ -407,7 +408,7 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 * No es un lenguaje de programación, sino un **lenguaje descriptivo** que indica al navegador cómo mostrar el contenido.
 * Actúa como el **esqueleto** de cualquier sitio web.
 * Define elementos como: Títulos (`<h1>` a `<h6>`), Párrafos (`<p>`), Enlaces (`<a>`), Imágenes (`<img>`), Listas (`<ul>`, `<ol>`, `<li>`), Tablas (`<table>`, `<tr>`, `<td>`) y Formularios (`<form>`, `<input>`, `<button>`).
-    
+
 ---
 
 ### 🧩 Estructura básica de un documento HTML
@@ -439,22 +440,4 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
     </footer>
 </body>
 </html>
-
-## La importancia de `index.html`
-
-El archivo `index.html` es fundamental en cualquier sitio web. Los servidores web buscan automáticamente este archivo cuando un usuario visita la URL raíz de un directorio (ej. `www.ejemplo.com`).
-
-### Por qué es importante
-
-* **Página de inicio:** `index.html` actúa como la puerta de entrada a tu sitio web, mostrando el contenido inicial que los usuarios verán.
-* **Navegación:** Facilita que los visitantes accedan a otras páginas del sitio mediante enlaces desde esta página principal.
-* **SEO y motores de búsqueda:** Tener un `index.html` correctamente estructurado ayuda a que los motores de búsqueda indexen tu sitio de manera eficiente.
-* **Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo como punto de entrada.
-
-### Buenas prácticas
-
-* Mantén la estructura limpia: `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` correctamente anidados.
-* Incluye títulos (`<title>`), meta etiquetas (`<meta>`), y enlaces a hojas de estilo o scripts.
-* Usa contenido relevante y jerarquía clara de encabezados (`<h1>`, `<h2>`, `<h3>`).
-* Optimiza el rendimiento: minimiza scripts y CSS innecesarios para que la página cargue rápido.
-* Incluye accesibilidad: etiquetas semánticas y atributos como `alt` en imágenes.
+```
