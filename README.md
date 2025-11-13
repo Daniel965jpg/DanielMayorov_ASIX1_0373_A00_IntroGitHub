@@ -220,3 +220,58 @@ Es una **sintaxis sencilla** para formatear texto plano, ideal para documentaci�
 * Se pueden crear listas anidadas utilizando espacios o tabulaciones.
 * Para enlaces relativos a tu proyecto puedes usar rutas locales: `[Archivo](docs/archivo.md)`
 * Las imágenes también pueden tener rutas locales o URLs absolutas.
+
+## 5.2. HTML (.html)
+HTML (Hyper Text Markup Language) da estructura a una página web.
+
+No es un lenguaje de programación, sino un lenguaje de marcado, que indica al navegador cómo mostrar contenido.
+
+### Estructura básica de una página HTML (HTML5 Boilerplate)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la Página (aparece en la pestaña)</title>
+    
+    <!-- Vincular hoja de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Ícono de la página -->
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Mi Sitio Web</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre mí</h2>
+            <p>Esto es un párrafo con un <a href="contacto.html">enlace</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Nombre.</p>
+    </footer>
+</body>
+</html>
+
+### HTML Semántico
+Utiliza etiquetas como `<header>`, `<main>`, `<footer>`, `<nav>`, `<section>` y `<article>` para dar significado a la estructura.
+
+Esto es vital para:
+* **Accesibilidad:** los lectores de pantalla pueden interpretar mejor la página.
+* **SEO:** los motores de búsqueda como Google entienden mejor el contenido de tu web.
+### Ejemplos de uso semántico:
+
+* `<nav>` &rarr; barra de navegación
+* `<section>` &rarr; sección del contenido
+* `<article>` &rarr; artículo independiente
+* `<footer>` &rarr; pie de página
+
+### Consejos adicionales
+* Mantén tu HTML limpio y organizado con sangrías consistentes.
+* Usa comentarios: `` para documentar tu código.
+* Combina HTML con CSS para diseño y estilo y con JavaScript para interactividad. (que aun no hemos hecho)
