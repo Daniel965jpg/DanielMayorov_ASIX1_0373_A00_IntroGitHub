@@ -89,7 +89,8 @@ Un repositorio ("repo") es simplemente una carpeta de proyecto que está siendo 
 
 Tienes tres caminos principales:
 
-#### Opción 1: Clonar un Repositorio Existente (El más común)
+### Opción 1: Clonar un Repositorio Existente (El más común)
+
 Clonar descarga una copia completa de un proyecto existente en GitHub (incluyendo todo el historial) a tu ordenador.
 
 ```bash
@@ -97,12 +98,12 @@ Clonar descarga una copia completa de un proyecto existente en GitHub (incluyend
 git clone [https://github.com/usuario/nombre-del-repo.git](https://github.com/usuario/nombre-del-repo.git)
 
 # Esto crea una nueva carpeta "nombre-del-repo". Entra en ella:
-cd nombre-del-repo.
+cd nombre-del-repo
 
-#### Opción 2: Crear un Repositorio Local Nuevo (desde cero)
+### Opción 2: Crear un Repositorio Local Nuevo (desde cero)
+
 Si empiezas un proyecto nuevo desde tu ordenador.
 
-```bash
 # Crea tu carpeta de proyecto
 mkdir mi-proyecto
 cd mi-proyecto
@@ -117,7 +118,7 @@ git commit -m "Commit inicial"
 Para bajar los cambios del remoto y fusiónarlos con nuestro trabajo el comando es:
 git pull
 
-## 4. Colaboración: Ramas y Pull Requests
+### 4. Colaboración: Ramas y Pull Requests
 
 Esta es la parte más potente de GitHub.
 
@@ -148,4 +149,3 @@ git push -u origin feature/nuevo-formulario
 
 # 5. Ve a GitHub: la plataforma detectará la nueva rama
 #    y te mostrará un botón para "Crear un Pull Request".
-
