@@ -398,15 +398,25 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 
 ### 5. Fundamentos Web
 
-### ¿Qué es HTML?
+### 5.2. ¿Qué es HTML?
 
-* HTML significa **HyperText Markup Language**.
-* Es el lenguaje estándar para crear la **estructura y contenido** de una página web.
-* **No es un lenguaje de programación**, sino un lenguaje de marcado (descriptivo).
-* Actúa como el "esqueleto" de un sitio web.
-* Define elementos como: títulos, párrafos, enlaces, imágenes, listas, tablas, etc.
+HTML (**HyperText Markup Language**) es el **lenguaje estándar de marcado** utilizado para **crear la estructura y el contenido de una página web**.  
+No es un lenguaje de programación, sino un **lenguaje descriptivo**, que indica al navegador cómo debe mostrarse cada parte del contenido.
 
-### Estructura básica de un documento HTML
+**En otras palabras:** HTML es el **esqueleto de cualquier sitio web**.  
+Define elementos como:
+
+- Títulos (`<h1>` a `<h6>`)
+- Párrafos (`<p>`)
+- Enlaces (`<a>`)
+- Imágenes (`<img>`)
+- Listas (`<ul>`, `<ol>`, `<li>`)
+- Tablas (`<table>`, `<tr>`, `<td>`)
+- Formularios (`<form>`, `<input>`, `<button>`)
+
+---
+
+### 🧩 Estructura básica de un documento HTML
 
 ```html
 <!DOCTYPE html>
@@ -414,8 +424,7 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página (aparece en la pestaña)</title>
-    
+    <title>Título de la Página</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico">
 </head>
