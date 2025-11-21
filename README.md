@@ -658,3 +658,10 @@ Un **favicon** (icono de favorito) es el pequeño icono (normalmente de 16x16 o 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
+Apuntes de CSS (Hojas de Estilo en Cascada)
+## Antes de nada, **que es CSS?** Es un lenguaje de estilo que se utiliza para controlar la presentación, el diseño y la apariencia de documentos escritos en un lenguaje de marcado como HTML
+
+## 1. Origen y Evolución
+* **Problema inicial:** En los inicios, HTML era solo estructura. Al querer mejorar el diseño, el código se ensuciaba mezclando contenido y presentación.
+* **Solución:** Nace CSS para separar la **estructura** (HTML) de la **presentación** (CSS).
