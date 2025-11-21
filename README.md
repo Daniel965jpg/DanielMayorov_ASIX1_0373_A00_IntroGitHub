@@ -661,7 +661,10 @@ Un **favicon** (icono de favorito) es el pequeño icono (normalmente de 16x16 o 
 ```
 
 Apuntes de CSS (Hojas de Estilo en Cascada)
-## Antes de nada, **que es CSS?** Es un lenguaje de estilo que se utiliza para controlar la presentación, el diseño y la apariencia de documentos escritos en un lenguaje de marcado como HTML
+[CSS](css.png) 
+## Antes de nada, **que es CSS?** 
+Es un lenguaje de estilo que se utiliza para controlar la presentación, el diseño y la apariencia de documentos escritos en un lenguaje de marcado como HTML 
+
 
 ## 1. Origen y Evolución
 * **Problema inicial:** En los inicios, HTML era solo estructura. Al querer mejorar el diseño, el código se ensuciaba mezclando contenido y presentación.
