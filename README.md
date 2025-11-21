@@ -668,16 +668,33 @@ Un **favicon** (icono de favorito) es el pequeño icono (normalmente de 16x16 o 
 Es un lenguaje de estilo que se utiliza para controlar la presentación, el diseño y la apariencia de documentos escritos en un lenguaje de marcado como HTML 
 En resumen, es un tipo de lenguaje que se utiliza para darle estilo a nuestro código hecho en *HTML* a través de un archivo adicional en **Visual Studio code**
 
+## 1. Origen y Evolución
+* **Problema inicial:** En los inicios, HTML era solo estructura. Al querer mejorar el diseño, el código se ensuciaba mezclando contenido y presentación.
+* **Solución:** Nace CSS para separar la **estructura** (HTML) de la **presentación** (CSS).
+
+* **Empezó** en el 1996-1998 y se publicó el primer contenido CSS en ese año.
+<br>
+Los navegadores cuando van apareciendo nuevas funciones las van implementando poco a poco. **Ejemplo Práctico**
+<br>
+* **Microsoft Edge** En su día (2020), antes de aplicar su nuevo motor, carecía de soporte para efectos gráficos
+<br> 
+Mientras que **Google Chome** Utiliza el motor *Blink* y suele marcar la pauta en nuevos estandáres. Tiene funciones con mejor adaptabilidad en el día a día.
+
 ## Hay dos formas de aplicar CSS en nuestro archivo *HTML*
 
 1. La primera sería directamente en nuestro archivo HTML, estaremos obligados a ponerlo dentro de nuestra etiqueta *<head>*
+
 2. Con un archivo **style.css** externo y dentro de el, podremos estilizar lo que queramos a nuestro gusto, respetando algunas normas y patrones.
 
 #### Primera Forma
 
 ![IntroduccionCSS](css2.png)
-En la captura, podemos ver primero, como aplicamos **CSS** dentro de nuestro archivo HTML y aparte, dos formas 
+En la captura, podemos ver primero, como aplicamos **CSS** dentro de nuestro archivo HTML y aparte, dos formas tanto estilo **interno** o **externo**
 
-## 1. Origen y Evolución
-* **Problema inicial:** En los inicios, HTML era solo estructura. Al querer mejorar el diseño, el código se ensuciaba mezclando contenido y presentación.
-* **Solución:** Nace CSS para separar la **estructura** (HTML) de la **presentación** (CSS).
+1.  **Flecha Superior (Estilo Externo):**
+    * Se usa la etiqueta `<link>` dentro del `<head>`. <br> Porque? 
+    > **Resumen:** Se pone en el `<head>` para que el navegador cargue el diseño **antes** de pintar el contenido, evitando que la web se vea "desnuda" o rota el primer segundo.
+    * Vincula el archivo HTML con una hoja de estilos separada llamada `estilo.css`.
+    * *Es la forma recomendada de trabajar.*
+
+
