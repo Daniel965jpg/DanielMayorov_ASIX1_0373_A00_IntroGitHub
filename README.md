@@ -660,7 +660,7 @@ Un **favicon** (icono de favorito) es el pequeño icono (normalmente de 16x16 o 
 </head>
 ```
 
-# Apuntes de CSS (Hojas de Estilo en Cascada)
+# Apuntes de **CSS**  (Hojas de Estilo en Cascada)
 
 ![CSS](css.png) 
 ## Antes de nada, **que es CSS?** 
@@ -670,31 +670,127 @@ En resumen, es un tipo de lenguaje que se utiliza para darle estilo a nuestro c�
 
 ## 1. Origen y Evolución
 * **Problema inicial:** En los inicios, HTML era solo estructura. Al querer mejorar el diseño, el código se ensuciaba mezclando contenido y presentación.
-* **Solución:** Nace CSS para separar la **estructura** (HTML) de la **presentación** (CSS).
-
+* **Solución:** Nace CSS para separar la **estructura** (HTML) de la **presentación** (CSS). <br>
+    * *HTML*: Define qué es cada cosa (título, vínculo)
+    * *CSS*: Define cómo se ve (color, espacio posición)
 * **Empezó** en el 1996-1998 y se publicó el primer contenido CSS en ese año.
 <br>
-Los navegadores cuando van apareciendo nuevas funciones las van implementando poco a poco. **Ejemplo Práctico**
+Los navegadores cuando van apareciendo nuevas funciones las van implementando poco a poco. <br>
+
+**Ejemplo:**
 <br>
 * **Microsoft Edge** En su día (2020), antes de aplicar su nuevo motor, carecía de soporte para efectos gráficos
 <br> 
-Mientras que **Google Chome** Utiliza el motor *Blink* y suele marcar la pauta en nuevos estandáres. Tiene funciones con mejor adaptabilidad en el día a día.
+Mientras que **Google Chome** Utiliza el motor *Blink* y suele marcar la pauta en nuevos estandáres. Tiene funciones con mejor adaptabilidad en el día a día. <br>
+Aquí podemos **ver y notar las diferencias** del porque en un navegador carga con mayor rapidez o mayor sencillez algunos detalles de diferentes páginas (por ejemplo).
 
-## Hay dos formas de aplicar CSS en nuestro archivo *HTML*
+## 2. Ventajas e Inconvenientes
 
-1. La primera sería directamente en nuestro archivo HTML, estaremos obligados a ponerlo dentro de nuestra etiqueta *<head>*
+* ### Ventajas
+    * Código más fácil de leer.
+    * Mayor potencia de diseño que el HTML antiguo.
+    * Lenguaje sencillo.
+    * **Reutilización**: Una misma hoja de estilo sirve para muchas páginas HTML.
+    * **Adaptabilidad**: Puedes definir hojas distintas según el dispositivo (pantalla ordenador vs impresión).
 
-2. Con un archivo **style.css** externo y dentro de el, podremos estilizar lo que queramos a nuestro gusto, respetando algunas normas y patrones.
+* ## Inconveniente principal
 
-#### Primera Forma
+    * Inconsistencia entre navegadores: Recordando la mención anterior, no todos los navegadores interpretan el código igual ni cumplen con los estándares al 100%, obligando a crear *"parches"* para navegadores específicos.
+
+
+## 3.  Formas de aplicar CSS
+
+Existen 3 formas principales de aplicar estilos, aunque en el siguiente ejemplo práctico **solo veremos dos de ellas**:
+
+1.  **Estilo "Externo"** (Recomendado).
+2.  **Estilo "Interno"** (En la cabecera).
+3.  **Estilo "Inline"** (En línea).
+
+### Ejemplo Práctico 
 
 ![IntroduccionCSS](css2.png)
-En la captura, podemos ver primero, como aplicamos **CSS** dentro de nuestro archivo HTML y aparte, dos formas tanto estilo **interno** o **externo**
 
-1.  **Flecha Superior (Estilo Externo):**
-    * Se usa la etiqueta `<link>` dentro del `<head>`. <br> Porque? 
-    > **Resumen:** Se pone en el `<head>` para que el navegador cargue el diseño **antes** de pintar el contenido, evitando que la web se vea "desnuda" o rota el primer segundo.
-    * Vincula el archivo HTML con una hoja de estilos separada llamada `estilo.css`.
-    * *Es la forma recomendada de trabajar.*
+En esta captura de código podemos ver dos de las formas mencionadas arriba en el mismo archivo:
 
+* **Estilo Externo (Flecha Superior):**
+    Vemos la etiqueta `<link>` dentro del `<head>`. Esta línea conecta el HTML con el archivo `estilo.css`.
+    > **Nota:** Se coloca en el head para evitar que la web se vea "rota" mientras carga.
 
+* **Estilo Inline (Flecha Inferior):**
+    Vemos el atributo `style="..."` dentro de la etiqueta `<p>`.
+    * *Ejemplo:* `<p style="color: green;">`
+    Aquí se está aplicando un color y tamaño específico solo para ese párrafo.
+    > **Ojo:** Al ser "Inline", este estilo **tiene prioridad** y sobrescribirá lo que diga el archivo externo.
+
+* **Que falta?**
+    En esta imagen **NO** se está usando el **Estilo Interno** (etiquetas `<style>` en el head).
+
+### Demostración: Reglas Generales vs. Excepciones
+
+"El estilo.css dice una cosa y el resultado otra, veremos porque.
+
+![Código CSS](cass4.png)
+
+![Resultado en Navegador](css3.png)
+
+**¿Qué está pasando aquí?**
+
+1.  **La Regla General (El archivo externo):**
+    En nuestro archivo CSS (imagen izquierda), hemos dictado una norma para toda la web: *"Todos los párrafos (`p`) deben ser de color rojo"*.
+    * *Resultado:* El primer párrafo obedece y se pinta de rojo.
+
+2.  **La Excepción (El estilo en línea):**
+    El último párrafo, sin embargo, aparece en **verde**.
+    Esto ocurre porque el estilo en línea (`style="..."`) actúa como una excepción directa. Aunque la norma general diga "rojo", la instrucción específica en la etiqueta HTML dice "verde".
+
+> **Conclusión:**
+> El navegador siempre hará caso a la instrucción **más cercana** al elemento.
+> * El archivo CSS está "lejos" (es una norma global).
+> * El atributo `style` está "pegado" al texto (es una orden directa).
+>
+> Por eso: **Orden directa (Inline) > Norma global (Externo).**
+
+--- 
+## Sistema de Puntos
+
+Cuando hay un conflicto (como el rojo y verde de las capturas) el navegador suma puntos. **Gana el que más tenga**
+
+### 1. La Tabla de Puntuación
+* **1000 puntos:** Estilo Inline (`style="..."`). 
+* **100 puntos:** ID (`#header`).
+* **10 puntos:** Clases (`.menu`, `:hover`).
+* **1 punto:** Elementos (`h1`, `div`, `p`).
+* **0 puntos:** Universal (`*`).    
+
+### 2. Las cuentas claras 
+
+![Código CSS](css2.png)
+![Código CSS](cass4.png)
+![Resultado](css3.png)
+
+* **El CSS externo (Rojo):** Es una etiqueta `p` -> **1 punto**.
+* **El HTML inline (Verde):** Es un atributo `style` -> **1000 puntos**.
+
+**Resultado:** Gana el **VERDE** por una diferencia enorme (1000 > 1).
+
+---
+
+### 3. Notas Extra
+* **`!important`:** Es el "botón nuclear". Si lo usas, gana a todos los puntos anteriores.
+* **Herencia:** Es lo más débil. Cualquier regla directa (aunque valga 1 punto) gana a lo heredado del padre.
+
+##  Sintaxis Básica: Comentarios
+
+Los comentarios son notas para ti (el programador) que **el navegador ignora** completamente (no afectan al diseño).
+
+* **Símbolos:** Se escriben entre `/*` y `*/`.
+* **Característica:** En CSS **solo existen comentarios de bloque**, por lo que pueden ocupar una o varias líneas sin problema.
+
+```css
+/* Este es un comentario explicativo
+   que no afectará a la web 
+*/
+
+p {
+    color: red; /* Comentario en la misma línea */
+}
