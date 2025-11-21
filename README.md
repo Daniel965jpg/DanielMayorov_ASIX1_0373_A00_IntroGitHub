@@ -660,11 +660,23 @@ Un **favicon** (icono de favorito) es el pequeño icono (normalmente de 16x16 o 
 </head>
 ```
 
-Apuntes de CSS (Hojas de Estilo en Cascada)
+# Apuntes de CSS (Hojas de Estilo en Cascada)
+
 ![CSS](css.png) 
 ## Antes de nada, **que es CSS?** 
-Es un lenguaje de estilo que se utiliza para controlar la presentación, el diseño y la apariencia de documentos escritos en un lenguaje de marcado como HTML 
 
+Es un lenguaje de estilo que se utiliza para controlar la presentación, el diseño y la apariencia de documentos escritos en un lenguaje de marcado como HTML 
+En resumen, es un tipo de lenguaje que se utiliza para darle estilo a nuestro código hecho en *HTML* a través de un archivo adicional en **Visual Studio code**
+
+## Hay dos formas de aplicar CSS en nuestro archivo *HTML*
+
+1. La primera sería directamente en nuestro archivo HTML, estaremos obligados a ponerlo dentro de nuestra etiqueta *<head>*
+2. Con un archivo **style.css** externo y dentro de el, podremos estilizar lo que queramos a nuestro gusto, respetando algunas normas y patrones.
+
+#### Primera Forma
+
+![IntroduccionCSS](ImagenesCSS/css2.png)
+En la captura, podemos ver primero, como aplicamos **CSS** dentro de nuestro archivo HTML y aparte, dos formas 
 
 ## 1. Origen y Evolución
 * **Problema inicial:** En los inicios, HTML era solo estructura. Al querer mejorar el diseño, el código se ensuciaba mezclando contenido y presentación.
