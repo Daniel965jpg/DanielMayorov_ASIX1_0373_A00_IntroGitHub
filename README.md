@@ -675,7 +675,7 @@ En resumen, es un tipo de lenguaje que se utiliza para darle estilo a nuestro c√
 
 #### Primera Forma
 
-![IntroduccionCSS](ImagenesCSS/css2.png)
+![IntroduccionCSS](css2.png)
 En la captura, podemos ver primero, como aplicamos **CSS** dentro de nuestro archivo HTML y aparte, dos formas 
 
 ## 1. Origen y Evoluci√≥n
