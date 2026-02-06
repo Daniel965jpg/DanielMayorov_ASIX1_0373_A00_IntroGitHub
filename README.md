@@ -669,11 +669,16 @@ Es un lenguaje de estilo que se utiliza para controlar la presentación, el dise
 En resumen, es un tipo de lenguaje que se utiliza para darle estilo a nuestro código hecho en *HTML* a través de un archivo adicional en **Visual Studio code**
 
 ## 1. Origen y Evolución
-* **Problema inicial:** En los inicios, HTML era solo estructura. Al querer mejorar el diseño, el código se ensuciaba mezclando contenido y presentación.
-* **Solución:** Nace CSS para separar la **estructura** (HTML) de la **presentación** (CSS). <br>
-    * *HTML*: Define qué es cada cosa (título, vínculo)
-    * *CSS*: Define cómo se ve (color, espacio posición)
-* **Empezó** en el 1996-1998 y se publicó el primer contenido CSS en ese año.
+
+**Problema inicial:** En los inicios, HTML era solo estructura. Al querer mejorar el diseño, el código se ensuciaba mezclando contenido y presentación.
+
+**Solución:** Nace CSS para separar la **estructura** (HTML) de la **presentación** (CSS). <br>
+
+*HTML*: Define qué es cada cosa (título, vínculo)
+
+*CSS*: Define cómo se ve (color, espacio posición)
+
+**Empezó** en el 1996-1998 y se publicó el primer contenido CSS en ese año.
 <br>
 Los navegadores cuando van apareciendo nuevas funciones las van implementando poco a poco. <br>
 
@@ -682,20 +687,25 @@ Los navegadores cuando van apareciendo nuevas funciones las van implementando po
 * **Microsoft Edge** En su día (2020), antes de aplicar su nuevo motor, carecía de soporte para efectos gráficos
 <br> 
 Mientras que **Google Chome** Utiliza el motor *Blink* y suele marcar la pauta en nuevos estandáres. Tiene funciones con mejor adaptabilidad en el día a día. <br>
-Aquí podemos **ver y notar las diferencias** del porque en un navegador carga con mayor rapidez o mayor sencillez algunos detalles de diferentes páginas (por ejemplo).
+
+Aquí podemos **ver y notar las diferencias** del porque en un navegador carga con mayor rapidez o mayor sencillez algunos detalles de diferentes páginas.
 
 ## 2. Ventajas e Inconvenientes
 
-* ### Ventajas
-    * Código más fácil de leer.
-    * Mayor potencia de diseño que el HTML antiguo.
-    * Lenguaje sencillo.
-    * **Reutilización**: Una misma hoja de estilo sirve para muchas páginas HTML.
-    * **Adaptabilidad**: Puedes definir hojas distintas según el dispositivo (pantalla ordenador vs impresión).
+### Ventajas
+Código más fácil de leer.
 
-* ## Inconveniente principal
+Mayor potencia de diseño que el HTML antiguo.
 
-    * Inconsistencia entre navegadores: Recordando la mención anterior, no todos los navegadores interpretan el código igual ni cumplen con los estándares al 100%, obligando a crear *"parches"* para navegadores específicos.
+Lenguaje sencillo.
+
+**Reutilización**: Una misma hoja de estilo sirve para muchas páginas HTML.
+
+**Adaptabilidad**: Puedes definir hojas distintas según el dispositivo (pantalla ordenador vs impresión).
+
+## Inconveniente principal
+
+Inconsistencia entre navegadores: Recordando la mención anterior, no todos los navegadores interpretan el código igual ni cumplen con los estándares al 100%, obligando a crear *"parches"* para navegadores específicos.
 
 
 ## 3.  Formas de aplicar CSS
@@ -712,15 +722,18 @@ Existen 3 formas principales de aplicar estilos, aunque en el siguiente ejemplo 
 
 En esta captura de código podemos ver dos de las formas mencionadas arriba en el mismo archivo:
 
-* **Estilo Externo (Flecha Superior):**
-    Vemos la etiqueta `<link>` dentro del `<head>`. Esta línea conecta el HTML con el archivo `estilo.css`.
-    > **Nota:** Se coloca en el head para evitar que la web se vea "rota" mientras carga.
+**Estilo Externo (Flecha Superior):**
+Vemos la etiqueta `<link>` dentro del `<head>`. Esta línea conecta el HTML con el archivo *estilo.css*.
 
-* **Estilo Inline (Flecha Inferior):**
-    Vemos el atributo `style="..."` dentro de la etiqueta `<p>`.
-    * *Ejemplo:* `<p style="color: green;">`
-    Aquí se está aplicando un color y tamaño específico solo para ese párrafo.
-    > **Ojo:** Al ser "Inline", este estilo **tiene prioridad** y sobrescribirá lo que diga el archivo externo.
+**Nota:** Se coloca en el head para evitar que la web se vea "rota" mientras carga.
+
+**Estilo Inline (Flecha Inferior):**
+
+Vemos el atributo *style="..."* dentro de la etiqueta `<p>`.
+* *Ejemplo:* `<p style="color: green;">`
+Aquí se está aplicando un color y tamaño específico solo para ese párrafo.
+
+**Importante:** Al ser "Inline", este estilo **tiene prioridad** y sobrescribirá lo que diga el archivo externo.
 
 * **Que falta?**
     En esta imagen **NO** se está usando el **Estilo Interno** (etiquetas `<style>` en el head).
@@ -736,31 +749,38 @@ En esta captura de código podemos ver dos de las formas mencionadas arriba en e
 **¿Qué está pasando aquí?**
 
 1.  **La Regla General (El archivo externo):**
-    En nuestro archivo CSS (imagen izquierda), hemos dictado una norma para toda la web: *"Todos los párrafos (`p`) deben ser de color rojo"*.
-    * *Resultado:* El primer párrafo obedece y se pinta de rojo.
+
+En nuestro archivo CSS, hemos puesto una norma para toda la web: *"Todos los párrafos (`p`) deben ser de color rojo"*.
+
+* *Resultado:* El primer párrafo obedece y se pinta de rojo.
 
 2.  **La Excepción (El estilo en línea):**
-    El último párrafo, sin embargo, aparece en **verde**.
-    Esto ocurre porque el estilo en línea (`style="..."`) actúa como una excepción directa. Aunque la norma general diga "rojo", la instrucción específica en la etiqueta HTML dice "verde".
 
-> **Conclusión:**
-> El navegador siempre hará caso a la instrucción **más cercana** al elemento.
-> * El archivo CSS está "lejos" (es una norma global).
-> * El atributo `style` está "pegado" al texto (es una orden directa).
->
-> Por eso: **Orden directa (Inline) > Norma global (Externo).**
+El último párrafo, sin embargo, aparece en **verde**.
+Esto ocurre porque el estilo en línea (*style="..."*) actúa como una excepción directa. Aunque la norma general diga "rojo", la instrucción específica en la etiqueta HTML dice "verde".
 
---- 
+ **Conclusión:**
+ El navegador siempre hará caso a la instrucción **más cercana** al elemento.
+
+* El archivo CSS está "lejos" (es una norma global).
+
+* El atributo *style* está "pegado" al texto (es una orden directa).
+
+Por eso: **Orden directa (Inline) > Norma global (Externo).**
+
+
 ## Sistema de Puntos
+
+![Explicación de los puntos en una imágen](explicación-puntos.png)
 
 Cuando hay un conflicto (como el rojo y verde de las capturas) el navegador suma puntos. **Gana el que más tenga**
 
 ### 1. La Tabla de Puntuación
-* **1000 puntos:** Estilo Inline (`style="..."`). 
-* **100 puntos:** ID (`#header`).
-* **10 puntos:** Clases (`.menu`, `:hover`).
-* **1 punto:** Elementos (`h1`, `div`, `p`).
-* **0 puntos:** Universal (`*`).    
+* **1000 puntos:** Estilo Inline (style="..."). 
+* **100 puntos:** ID (#header).
+* **10 puntos:** Clases (.menu, :hover).
+* **1 punto:** Elementos (h1, div, p).
+* **0 puntos:** Universal (*).    
 
 ### 2. Las cuentas claras 
 
@@ -768,29 +788,310 @@ Cuando hay un conflicto (como el rojo y verde de las capturas) el navegador suma
 ![Código CSS](cass4.png)
 ![Resultado](css3.png)
 
-* **El CSS externo (Rojo):** Es una etiqueta `p` -> **1 punto**.
-* **El HTML inline (Verde):** Es un atributo `style` -> **1000 puntos**.
+* **El CSS externo (Rojo):** Es una etiqueta *p* -> **1 punto**.
+
+* **El HTML inline (Verde):** Es un atributo *style* -> **1000 puntos**.
 
 **Resultado:** Gana el **VERDE** por una diferencia enorme (1000 > 1).
 
 ---
 
 ### 3. Notas Extra
-* **`!important`:** Es el "botón nuclear". Si lo usas, gana a todos los puntos anteriores.
-* **Herencia:** Es lo más débil. Cualquier regla directa (aunque valga 1 punto) gana a lo heredado del padre.
+
+* **!important:** Es el "botón nuclear". Si lo usas, gana a todos los puntos anteriores.
+
+* **Herencia:** Es lo más débil. Cualquier regla directa (aunque valga 1 punto) gana a lo heredado.
 
 ##  Sintaxis Básica: Comentarios
 
-Los comentarios son notas para ti (el programador) que **el navegador ignora** completamente (no afectan al diseño).
+Los comentarios son notas para nosotros o el quipo que esté detrás del código que **el navegador ignora** completamente (no se ven).
 
-* **Símbolos:** Se escriben entre `/*` y `*/`.
+* **Símbolos:** Se escriben entre /* y */.
+
 * **Característica:** En CSS **solo existen comentarios de bloque**, por lo que pueden ocupar una o varias líneas sin problema.
 
-```css
+
 /* Este es un comentario explicativo
    que no afectará a la web 
 */
 
 p {
-    color: red; /* Comentario en la misma línea */
+    color: blue; /* Comentario en la misma línea */
 }
+
+![Representación de los comentarios](comentarios-css.png)
+
+# Apuntes: Selectores CSS (Tipos y Uso)
+
+Selectores --> Para que sirven?
+
+Sirven para decirle al navegador quiero cambiar *"x"* (color, tamaño, borde , etc..)
+
+![Estructura de una Regla CSS](sintáxis-básica.png)
+
+## 1. Los Básicos 
+
+### A. Selector de Elemento (o Tipo)
+**¿Qué es?** Elige todas las etiquetas iguales de la página.
+
+**Cómo se aplica:** Se escribe el nombre de la etiqueta.
+
+**Ejemplo:**
+    
+p { color: red; } 
+ Pone todos los párrafos en rojo
+    
+
+### B. Selector de ID
+**¿Qué es?** Elige un elemento **único**. Es como el DNI, no puede haber dos iguales en la misma página.
+
+**Cómo se aplica:** Se usa el símbolo almohadilla **#**.
+
+**Ejemplo:**
+    #menu-principal { background: black; }
+    
+
+### C. Selector de Clase
+**¿Qué es?** Elige un **grupo** de elementos a los que has puesto la misma etiqueta "class". Es ideal para repetir estilos en varios sitios.
+
+**Cómo se aplica:** Se usa el punto **.**
+
+**Ejemplo:**
+    .boton-azul { background: blue; }
+
+
+## 2. Los Avanzados 
+
+Sirven para seleccionar cosas muy específicas sin tener que llenar el HTML de clases extra.
+
+### A. Selector Universal
+**¿Qué es?** Elige **TODO** lo que hay en la página.
+
+Se aplica usando el asterísco `*`.
+
+**Ejemplo:**
+{ margin: 0; } 
+
+
+### B. Selector de Atributos
+**¿Qué es?** Elige elementos que tengan una propiedad específica.
+
+**Ejemplos:**
+    
+1. Por existencia (solo tener el atributo) */
+    img[alt] { border: 1px solid red; }
+
+* Afecta a todas las imágenes que tengan un texto alternativo
+
+img[src="alert.gif"] { border: 1px solid black; }
+
+
+### C. Hijos (>) vs. Descendientes
+Hay que entender la diferencia de "profundidad":
+
+1. **Selector de Hijos (>)**:
+
+Solo afecta a los hijos **directos** (el nivel inmediatamente inferior).
+    
+div > p → Solo los párrafos que están justo dentro del div.
+
+![Esquema Hijos vs Descendientes](selectores-padrehijo.png)
+
+2. **Selector de Descendientes (espacio)**:
+Afecta a los hijos, nietos, bisnietos... a cualquiera que esté dentro (hablando de ramas de importancia)
+    
+div p → Cualquier párrafo dentro del div
+
+### D. Selector de Hermanos Adyacentes (+)
+**¿Qué es?** Elige el elemento que está **justo después** de otro.
+
+**Ejemplo:**
+    h1 + p { margin-top: 0; } 
+* Solo afecta al primer párrafo que va justo después de un título
+
+### E. Pseudoclases (:)
+
+![Lista de los diferentes atributos](lista-pseudoclases.png)
+
+**¿Qué es?** Define estilos según el **estado** del elemento o la interacción del usuario.
+
+**Ejemplo:**
+    a:hover { color: orange; } 
+* Cambia a naranja cuando pasas el ratón por encima
+
+### F. Pseudoelementos (::)
+**¿Qué es?** Da estilo a una **parte específica** del elemento, no a todo entero.
+
+**Ejemplo:**
+    p::first-line { font-weight: bold; } 
+
+* Solo pone en negrita la primera línea del párrafo 
+
+### G. Selector de Hijo N-ésimo (:nth-child) 
+**¿Qué es?** Elige a un hijo específico según su posición (el 1º, el 2º, el 4º...), sin importar qué etiqueta sea.
+**Ejemplo:**
+.parent :nth-child(4) { 
+    color: red; 
+}
+* Selecciona el cuarto hijo del elemento con clase *.parent*
+
+
+## 3. Prioridad: 
+A veces hay conflicto (por ejemplo, el archivo CSS dice "rojo" pero el HTML dice "verde").
+
+El navegador usa un **sistema de puntos**, pero la regla fácil es: **"Cuanto más específico y cercano, más manda"**.
+
+1. **Estilo en línea (*style="..."*): **El Jefe Supremo**. Gana a casi todo porque es una orden directa en la etiqueta.
+
+2. **ID (#)**: **Subjefe**. Como es único, tiene mucha fuerza.
+
+3. **Clase (.)**: **Manda normal**.
+
+4. **Etiqueta (p, div)**: **La última opción**. Es muy genérico, así que cualquiera lo sobrescribe.
+
+## 4. El Modelo de Caja (Box Model)
+
+![Imágen representativa de Box Model](boxmargin.png)
+
+**¿Qué es?**
+
+Es el sistema que usa el navegador para calcular el tamaño total de cualquier elemento web. Considera que **toda** etiqueta HTML (div, h1, img) es una caja rectangular compuesta por capas.
+
+**Explicación técnica:**
+
+1.  **Contenido:** Es la parte útil del elemento, lo que realmente ves (el texto, la imagen o el vídeo).
+
+2.  **Padding (Relleno):** Es un espacio transparente que está **dentro** de la caja. Sirve para que el contenido no quede pegado a la línea del borde.
+
+3.  **Border (Borde):** Es la línea física que rodea la caja. Marca el límite exacto donde termina tu elemento.
+
+4.  **Margin (Margen):** Es un espacio transparente que está **fuera** de la caja. Sirve únicamente para separar este elemento de los demás que tenga al lado.
+
+### A. El Margen (Margin)
+
+**¿Qué es técnicamente?**
+Es la propiedad que define el espacio **externo** alrededor de la caja. Es un área transparente que no tiene color de fondo.
+
+**Control por lados:** Se puede definir una medida diferente para cada uno de los cuatro lados: arriba (top), derecha (right), abajo (bottom) e izquierda (left).
+
+**Centrado automático:** Si usas el valor auto, el navegador calcula el espacio sobrante y lo reparte (se usa comúnmente para centrar bloques horizontalmente).
+
+**Excepción importante:** Los elementos que son "de línea" (como un < span> o un enlace dentro de un texto) ignoran los márgenes de arriba y abajo; solo aplican los de los lados.
+
+---
+
+### B. Atajo: Escribir los 4 lados de golpe (Shorthand)
+En lugar de escribir 4 líneas de código, puedes definir el margen (o el relleno) en una sola línea. El navegador interpreta los lados según cuántos valores pongas:
+
+**1 valor:** Aplica a los **4 lados** por igual.
+    
+padding: 10px; /* Arriba, Abajo, Izq, Der = 10px */
+
+**2 valores:** El primero es **Vertical** (Arriba/Abajo) y el segundo **Horizontal** (Izq/Der).
+    
+padding: 10px 20px; /// 10px Arriba/Abajo | 20px Izq/Der
+
+* **4 valores:** Sigue el sentido de las **agujas del reloj** (empezando a las 12:00).
+
+padding: 10px 20px 30px 40px; 
+
+1. Arriba - 2. Derecha - 3. Abajo - 4. Izquierda
+
+
+## 5. Comportamiento de la Caja (Display y Tamaño)
+
+### A. Propiedad *display*
+Controla cómo se comporta el elemento dentro de la página.
+
+**block (Bloque):** El elemento ocupa **todo el ancho** disponible y fuerza un salto de línea (se pone uno debajo de otro).
+
+**inline (En línea):** El elemento solo ocupa el espacio de su contenido y se coloca al lado de otros.
+
+### B. El problema del tamaño (*box-sizing*)
+Por defecto, si añades relleno (*padding*) o borde a una caja, estos se suman al ancho total, haciendo la caja más grande de lo planeado.
+
+**Solución (*border-box*):** Cambia el cálculo para que el relleno y el borde se incluyan **dentro** de las medidas que has definido. 
+
+## 6. Control del Desbordamiento
+
+### A. Desbordamiento General (*overflow*)
+
+Define qué pasa cuando el contenido es más grande que la caja y no cabe.
+
+**visible:** El contenido se sale de la caja y se ve por fuera (es lo que pasa por defecto).
+
+**hidden:** Lo que sobra se corta y se oculta.
+
+**scroll:** Añade barras de desplazamiento siempre.
+
+**auto:** El navegador decide: si cabe no hace nada, y si no cabe añade barras de desplazamiento.
+
+### B. Desbordamiento de Texto (text-overflow)
+
+Sirve específicamente para controlar qué pasa con el **texto** cuando se corta por falta de espacio.
+
+1. **clip:** Corta el texto tajantemente justo donde acaba la caja.
+
+2. **ellipsis:** Corta el texto pero añade tres puntos suspensivos (...) al final para indicar que hay más.
+
+
+## 7. Diseño Flexible (Flexbox)
+**¿Qué es?**
+Es un sistema moderno para ordenar elementos en una web. Permite que los elementos se adapten automáticamente al espacio disponible, haciendo más fácil crear diseños que funcionen en móviles y ordenadores.
+
+### A. Conceptos Básicos
+Para que funcione, necesitas definir dos roles:
+
+1. **Contenedor (Padre):** Es el elemento que envuelve a los demás. Aquí aplicas *display: flex*.
+
+2. **Ítem (Hijo):** Son los elementos que están dentro. Estos son los que se mueven y se adaptan.
+
+### B. Los Ejes (Dirección)
+Flexbox organiza los elementos siguiendo dos líneas imaginarias:
+
+![Imágen representativa de los ejes de FlexBox](ejes.png)
+
+**Eje Principal:** Es la dirección principal hacia donde van los elementos (por defecto es horizontal, en fila).
+
+**Eje Secundario:** Es la dirección perpendicular (por defecto es vertical, de arriba a abajo).
+
+### Resumen Visual
+
+![Representación del FlexBox](resumen-displayflex.png)
+
+## 8. Diseño Responsivo (Responsive Design)
+
+![Representación del Responsive](diseño-responsive.png)
+
+**¿Qué es?**
+Es una técnica de diseño que permite que un sitio web se ajuste y reorganice automáticamente según el tamaño de la pantalla (móvil, tablet u ordenador) para que siempre se lea bien.
+
+**Características Principales:**
+
+**Flexible:** Los elementos no tienen tamaños fijos, si no que se estiran o encogen.
+
+**Rejillas fluidas:** Se usan porcentajes (ej: *width: 50%*) en lugar de píxeles fijos para que los contenedores se adapten.
+
+**Reorganización:** Lo que en un ordenador se ve en 3 columnas, en un móvil se coloca en una sola columna vertical para facilitar la lectura para el usuario.
+
+
+## 9. Media Queries (*@media*)
+
+**¿Qué son?**
+Son reglas especiales de CSS que funcionan como un "condicional". 
+Sirven para aplicar estilos específicos **solo** si la pantalla cumple ciertos requisitos (como tener un ancho mínimo o máximo).
+
+**Funcionamiento Técnico (Lógica Condicional):**
+Las *Media Queries* actúan como una sentencia lógica. 
+El navegador evalúa constantemente el ancho de la ventana de visualización (**viewport**). Si la condición se cumple (ej: el ancho es menor a 768px), el navegador activa ese bloque de código CSS respetándolo.
+
+**Jerarquía y Cascada (Estrategia Desktop-First):**
+El ejemplo utiliza una estrategia de **sobreescritura**. El navegador lee el código de arriba a abajo:
+
+1.  **Estilo Global (Default):** Se carga el *background-color: blue*. Esto aplica a todas las pantallas inicialmente.
+
+2.  **Punto de Ruptura (Tablet):** Si el viewport es *<=* 768px, la regla condicional se activa y **sobreescribe** el color anterior a verde.
+
+3.  **Punto de Ruptura (Móvil):** Si el viewport es *<=* 480px, esta nueva regla tiene prioridad por estar más abajo en la cascada y **vuelve a sobreescribir** el color a amarillo.
+
+![Representación de Media Queries](media-queries.png)
