@@ -679,14 +679,17 @@ En resumen, es un tipo de lenguaje que se utiliza para darle estilo a nuestro c�
 *CSS*: Define cómo se ve (color, espacio posición)
 
 **Empezó** en el 1996-1998 y se publicó el primer contenido CSS en ese año.
-<br>
-Los navegadores cuando van apareciendo nuevas funciones las van implementando poco a poco. <br>
+
+![Línea de Tiempo Evolución CSS](línea-del-tiempo-css.png)
+
+Los navegadores cuando van apareciendo nuevas funciones las van implementando poco a poco. 
 
 **Ejemplo:**
-<br>
-* **Microsoft Edge** En su día (2020), antes de aplicar su nuevo motor, carecía de soporte para efectos gráficos
-<br> 
-Mientras que **Google Chome** Utiliza el motor *Blink* y suele marcar la pauta en nuevos estandáres. Tiene funciones con mejor adaptabilidad en el día a día. <br>
+
+**Microsoft Edge** En su día (2020), antes de aplicar su nuevo motor, carecía de soporte para efectos gráficos
+
+
+Mientras que **Google Chome** Utiliza el motor *Blink* y suele marcar la pauta en nuevos estandáres. Tiene funciones con mejor adaptabilidad en el día a día. 
 
 Aquí podemos **ver y notar las diferencias** del porque en un navegador carga con mayor rapidez o mayor sencillez algunos detalles de diferentes páginas.
 
@@ -974,6 +977,8 @@ Es la propiedad que define el espacio **externo** alrededor de la caja. Es un á
 
 **Control por lados:** Se puede definir una medida diferente para cada uno de los cuatro lados: arriba (top), derecha (right), abajo (bottom) e izquierda (left).
 
+![Lista Propiedades Margin](margin-css.png)
+
 **Centrado automático:** Si usas el valor auto, el navegador calcula el espacio sobrante y lo reparte (se usa comúnmente para centrar bloques horizontalmente).
 
 **Excepción importante:** Los elementos que son "de línea" (como un < span> o un enlace dentro de un texto) ignoran los márgenes de arriba y abajo; solo aplican los de los lados.
@@ -982,6 +987,8 @@ Es la propiedad que define el espacio **externo** alrededor de la caja. Es un á
 
 ### B. Atajo: Escribir los 4 lados de golpe (Shorthand)
 En lugar de escribir 4 líneas de código, puedes definir el margen (o el relleno) en una sola línea. El navegador interpreta los lados según cuántos valores pongas:
+
+![Ejemplos Shorthand Colores](padding-css.png)
 
 **1 valor:** Aplica a los **4 lados** por igual.
     
@@ -1010,6 +1017,8 @@ Controla cómo se comporta el elemento dentro de la página.
 ### B. El problema del tamaño (*box-sizing*)
 Por defecto, si añades relleno (*padding*) o borde a una caja, estos se suman al ancho total, haciendo la caja más grande de lo planeado.
 
+![Solución Box Sizing](display-block.png)
+
 **Solución (*border-box*):** Cambia el cálculo para que el relleno y el borde se incluyan **dentro** de las medidas que has definido. 
 
 ## 6. Control del Desbordamiento
@@ -1017,6 +1026,8 @@ Por defecto, si añades relleno (*padding*) o borde a una caja, estos se suman a
 ### A. Desbordamiento General (*overflow*)
 
 Define qué pasa cuando el contenido es más grande que la caja y no cabe.
+
+![Tipos de Overflow](desbordamientos-overflow.png)
 
 **visible:** El contenido se sale de la caja y se ve por fuera (es lo que pasa por defecto).
 
@@ -1027,6 +1038,8 @@ Define qué pasa cuando el contenido es más grande que la caja y no cabe.
 **auto:** El navegador decide: si cabe no hace nada, y si no cabe añade barras de desplazamiento.
 
 ### B. Desbordamiento de Texto (text-overflow)
+
+![Tipos de Overflow](desbordamiento-overflow.png)
 
 Sirve específicamente para controlar qué pasa con el **texto** cuando se corta por falta de espacio.
 
@@ -1081,6 +1094,8 @@ Es una técnica de diseño que permite que un sitio web se ajuste y reorganice a
 Son reglas especiales de CSS que funcionan como un "condicional". 
 Sirven para aplicar estilos específicos **solo** si la pantalla cumple ciertos requisitos (como tener un ancho mínimo o máximo).
 
+![Representación de Media Queries](media-queries.png)
+
 **Funcionamiento Técnico (Lógica Condicional):**
 Las *Media Queries* actúan como una sentencia lógica. 
 El navegador evalúa constantemente el ancho de la ventana de visualización (**viewport**). Si la condición se cumple (ej: el ancho es menor a 768px), el navegador activa ese bloque de código CSS respetándolo.
@@ -1093,5 +1108,3 @@ El ejemplo utiliza una estrategia de **sobreescritura**. El navegador lee el có
 2.  **Punto de Ruptura (Tablet):** Si el viewport es *<=* 768px, la regla condicional se activa y **sobreescribe** el color anterior a verde.
 
 3.  **Punto de Ruptura (Móvil):** Si el viewport es *<=* 480px, esta nueva regla tiene prioridad por estar más abajo en la cascada y **vuelve a sobreescribir** el color a amarillo.
-
-![Representación de Media Queries](media-queries.png)
