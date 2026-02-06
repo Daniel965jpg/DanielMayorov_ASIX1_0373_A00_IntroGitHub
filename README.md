@@ -34,72 +34,79 @@ KASJNDjsdnLKSJDnksladnlkANDKJAsndKLASJDNkljsndKLJSDNkljnsdlkJNDkljndsklJNDKLjndL
 
 | Jugador | Equipo  | Nombre               |
 | ------- | ------- | -------------------- |
-| 32      | Lakers  | Magic Johnson        |
+| 32      | Lakers  | Maegic Johnson        |
 | 33      | Celtics | Boston Celtics       |
 | 23      | Bulls   | Michael "Air" Jordan |
 
 
 # Apuntes Completos: Git, Github y Fundamentos Web.
+
 ## 1. Conceptos Clave: Git vs. GitHub
 
-Que es Git y que es Github?
 
-* **Git:** Es un **sistema de control de versiones distribuido (DVCS)**. Es una herramienta que se ejecuta localmente en tu ordenador. Su trabajo es tomar "instantáneas" (llamadas *commits*) de tu código para guardar su historial, permitiéndote viajar en el tiempo entre diferentes versiones.
-* **GitHub:** Es una **plataforma web** que aloja repositorios Git en la nube. Es un servicio que te permite almacenar tus copias de repositorios (remotas) y, sobre todo, **colaborar** con otras personas de manera organizada.
+![Imágen Github](/html/github.png)
+
+**¿Qué diferencia hay entre ellos?**
+
+**Git:** Es un **sistema de control de versiones distribuido**. Funciona localmente en tu ordenador. Su trabajo es guardar el código para registrar todo el historial de cambios.
+
+**GitHub:** Es una **plataforma web** que aloja repositorios Git en la nube. Sirve para guardar copias remotas de tu código y **colaborar** con otras personas.
 
 ### El Flujo de Trabajo Básico de Git
 
-Localmente, Git gestiona tres "áreas" principales:
 
-1.  **Working Directory (Directorio de Trabajo):** Tu carpeta de proyecto con todos los archivos que estás editando.
-2.  **Staging Area (Área de Preparación):** Una "zona de espera". Aquí es donde añades los cambios que quieres incluir en el próximo *commit*.
-3.  **Local Repository (Repositorio Local):** La base de datos (`.git`) donde Git guarda permanentemente tus *commits* (el historial del proyecto).
+![Imágen Git](/html/git.png)
 
-El flujo es:
-`Modificas archivos` -> `(git add)` -> `Los pasas a Preparación` -> `(git commit)` -> `Los guardas permanentemente en el Repositorio Local`
+Git organiza el trabajo en tres áreas locales:
 
------------------
+1. **Working Directory** (Directorio de Trabajo): Es la carpeta de tu proyecto con los archivos que estás editando en ese momento.
+
+2. **Staging Area** (Área de Preparación): Es una zona de espera. Aquí añades los archivos modificados que quieres incluir en el siguiente *commit*.
+
+3. **Local Repository** (Repositorio Local): Es la base de datos interna (*.git*) donde se guardan permanentemente los cambios confirmados.
+
+**Esquema del flujo:**
+
+Modificar archivos -> git add -> Área de Preparación -> git commit` -> Repositorio Local
+
+---
 
 ### 2.1. Creación de la Cuenta de GitHub
 
-1.  **Regístrate:** Ve a `github.com` y crea una cuenta gratuita. Este será tu "hogar" remoto.
-2.  **Envía la URL:** La URL de tu perfil (ej. `https://github.com/tu-usuario`) es tu identidad pública.
+![Creación de cuenta GitHub](html/crear-cuenta-git.jpg)
+
+1. **Regístrate:** Vamos a *github.com* y creamos una cuenta gratuita. Este será nuestro espacio para guardar repositorios en la nube.
+
+2. **Envía la URL:** La URL de tu perfil (ej. *https://github.com/tu-usuario*) es tu identidad pública para compartir código.
 
 ### 2.2. Instalación de Herramientas Locales
 
-* **1. Instalar Git:**
-    * Ve a `git-scm.com` y descarga el instalador para tu sistema operativo.
-    * Una vez instalado, abre un terminal (Git Bash en Windows, Terminal en Mac/Linux) y **configura tu identidad**. Esto es obligatorio y enlazará tus *commits* con tu nombre y correo.
-        ```bash
-        git config --global user.name "Tu Nombre"
-        git config --global user.email "tu-correo@ejemplo.com"
-        ```
-    * **2. Instalar Visual Studio Code (VSC):**
-    * Ve a `code.visualstudio.com`.
-    * Es un editor de código moderno con una excelente integración con Git. Facilitará la visualización de cambios, la preparación (staging) y la validación (commit).
+**1. Instalar Git:**
+Ve a *git-scm.com* y descarga el instalador.
+Abre un terminal y **configura tu identidad** (obligatorio para firmar tus *commits*):
+    
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu-correo@ejemplo.com"
 
-    * **3. Instalar GitHub Desktop (Opcional):**
-    * Ve a `desktop.github.com`.
-    * Es un cliente oficial de GitHub con una interfaz gráfica. Es muy útil si prefieres no usar el terminal para todo, ya que simplifica visualmente acciones como clonar, subir cambios o crear ramas.
 
-    ---------------
+**2. Instalar Visual Studio Code (VSC):**
+
+![Imágen VisalStudio](/html/visualstudio.jpg)
+
+Ir a code.visualstudio.com.
+
+Es un editor de código que se integra con Git. Facilita ver cambios y realizar *commits* sin usar siempre la terminal.
+
+
 # Git y Fundamentos Web
-
-
----
-
-
 ## 3. Empezando un Proyecto
 
-
-Un **repositorio** (o *repo*) es simplemente una carpeta de proyecto que está siendo rastreada por **Git**.
-
-
----
+Un **repositorio** (o *repo*) es simplemente una carpeta de proyecto que está siendo rastreada por **Git** así en un futuro podremos hacer un mejor manejo de ello.
 
 
 ### 3.1. Opción 1: Clonar un Repositorio Existente (la más común)
 
+![Imágen Clonar Respositorio](/html/clonar-repositorio.png)
 
 Clonar significa descargar una copia completa de un proyecto existente en **GitHub** (incluyendo todo su historial) a tu ordenador.
 
@@ -109,117 +116,55 @@ Ejemplo: `https://github.com/usuario/nombre-del-repo.git`
 
 
 2. **Clona el repositorio**:
-```bash
 git clone https://github.com/usuario/nombre-del-repo.git
-```
-
 
 3. **Accede a la carpeta creada**:
-```bash
+
 cd nombre-del-repo
-```
----
 
 ### 3.2. Opción 2: Crear un Repositorio Local Nuevo (desde cero)
 
+![Imágen Clonar Respositorio](/html/añadir-repositorio.png)
 
 Si estás empezando un proyecto nuevo desde tu ordenador:
 
-
 1. **Crea una carpeta de proyecto**:
-```bash
 mkdir mi-proyecto
 cd mi-proyecto
-```
-
 
 2. **Inicializa Git dentro de la carpeta**:
-```bash
-git init
-```
 
+git init
 
 3. **Haz tu primer commit**:
-```bash
 git add .
 git commit -m "Commit inicial"
-```
-
-
----
 
 
 ### 3.3. Sincronizar Cambios
 
-
 Para bajar los cambios del repositorio remoto y fusionarlos con tu trabajo local, usa:
-```bash
-git pull
-```
+
+*git pull*
 
 
----
+## 4. Colaboracion: Ramas y Pull Requests
 
+Esta es la parte mas potente de **GitHub**. Permite trabajar en equipo sin romper el codigo principal del proyecto.
 
-## 4. Colaboración: Ramas y Pull Requests
+![Imágen Branch](/html/brach-git.png)
 
+### Conceptos Basicos
 
-Esta es la parte más potente de **GitHub**.
+**Rama (Branch):** Es una linea de tiempo paralela de *commits*. La rama principal se llama main.
 
+**Pull Request (PR):** Es una "solicitud para fusionar" tu rama con la rama `main`. Permite que otros revisen tu codigo antes de incluirlo.
 
----
-
-
-### Rama (*Branch*)
-
-
-Una **rama** es una línea de tiempo paralela de commits. La rama principal se llama `main`.
-
-### Flujo de trabajo
-
-1. Crea una rama nueva para cada tarea (ej. `feature/añadir-formulario`).
-2. Trabaja y haz commits en esa rama.
-3. Cuando termines, abre un **Pull Request (PR)**.
-4. Un PR es una "solicitud para fusionar" tu rama con `main`.
-5. Otras personas pueden revisar tu código, dejar comentarios y aprobarlo.
-6. Una vez aprobado, fusiona el PR y tu trabajo se incorpora a `main`.
-
-> **Importante:** Nunca deberías trabajar directamente sobre `main`.
-
-1.  **Asegúrate de que estás en "main" y tienes la última versión**
-    ```bash
-    git checkout main
-    git pull
-    ```
-
-2.  **Crea y cámbiate a una nueva rama**
-    ```bash
-    git checkout -b feature/nuevo-formulario
-    ```
-
-3.  **Haz tu trabajo... (edita, 'git add', 'git commit')**
-    ```bash
-    # ...
-    git add .
-    git commit -m "Añade formulario de contacto"
-    ```
-
-4.  **Sube tu *nueva rama* a GitHub**
-    ```bash
-    git push -u origin feature/nuevo-formulario
-    ```
-
-5.  **Ve a GitHub: la plataforma detectará la nueva rama y te mostrará un botón para "Crear un Pull Request".**
-
----
 # 5. Fundamentos Web
-
-
----
-
 
 ## 5.1. Markdown (`.md`)
 
+![Imágen Markdown](/html/markdown-repo1.png)
 
 Markdown es el lenguaje con el que se escriben archivos como los **README.md**.
 Es una **sintaxis sencilla** para formatear texto plano, ideal para documentación, blogs o notas técnicas.
@@ -227,8 +172,6 @@ Es una **sintaxis sencilla** para formatear texto plano, ideal para documentaci�
 
 ### Sintaxis básica de Markdown
 
-
-```markdown
 # Título H1
 ## Título H2
 ### Título H3
@@ -252,8 +195,6 @@ Es una **sintaxis sencilla** para formatear texto plano, ideal para documentaci�
 
 
 ![Esto es una imagen](ruta/a/la/imagen.png)
-```
-
 
 ### Bloques de código
 
@@ -276,24 +217,13 @@ Para escribir bloques de código de varias líneas, se utilizan tres tildes inve
 </html>
 ```
 
-
-### Tips adicionales
-
-
-- Puedes usar listas anidadas para organizar mejor tu información.
-- Para enlaces relativos a tu proyecto, usa rutas locales: `[Archivo](docs/archivo.md)`.
-- Las imágenes también pueden usar rutas locales o URLs absolutas.
-- Markdown soporta tablas, listas de tareas y líneas horizontales (`---`) para estructurar el contenido.
-- Mantén tu archivo `.md` limpio y organizado para facilitar la lectura.
-
 ### Flujo de trabajo típico
 
 
-1. Crea una rama nueva para cada tarea (por ejemplo: `feature/añadir-formulario`).
-2. Trabaja y haz commits en esa rama.
-# HTML Semántico y la importancia de `index.html`
+1. Crea una rama nueva para cada tarea
 
----
+2. Se Trabaja y se hacen commits en esa rama.
+# HTML Semántico y la importancia de *index.html*
 
 ## Ejemplo básico de HTML
 
@@ -326,99 +256,58 @@ Para escribir bloques de código de varias líneas, se utilizan tres tildes inve
 </html>
 ```
 
----
-
 ## HTML Semántico
 
 Utiliza etiquetas como `<header>`, `<main>`, `<footer>`, `<nav>`, `<section>` y `<article>` para dar **significado** a la estructura.
 
 ### Importancia del HTML Semántico
 
-**Esto es vital para:**
+**Accesibilidad:** los lectores de pantalla pueden interpretar mejor la página.
 
-* **Accesibilidad:** los lectores de pantalla pueden interpretar mejor la página.
-* **SEO:** los motores de búsqueda como Google entienden mejor el contenido de tu web.
+**SEO:** los motores de búsqueda como Google entienden mejor el contenido de tu web.
 
 **Ejemplos de uso semántico:**
 
-* `<nav>` → barra de navegación
-* `<section>` → sección del contenido
-* `<article>` → artículo independiente
-* `<footer>` → pie de página
+`<nav>` → barra de navegación
+`<section>` → sección del contenido
+`<article>` → artículo independiente
+`<footer>` → pie de página
 
-**Consejos adicionales:**
 
-* Mantén tu HTML limpio y organizado con sangrías consistentes.
-* Usa comentarios: `<!-- comentario -->` para documentar tu código.
-* Combina HTML con CSS para diseño y estilo y con JavaScript para interactividad.
+* Mantener tu HTML limpio y organizado.
 
----
+* Usa comentarios: `<!-- comentario -->` para documentar tu código, ya sea para acordarte o facilitar a tus compañeros leer con mayor facilidad el código
 
 ## La importancia de `index.html`
 
-El archivo `index.html` es fundamental en cualquier sitio web. Los servidores web buscan automáticamente este archivo cuando un usuario visita la URL raíz de un directorio (ej. `www.ejemplo.com`).
+![Index HTML](/html/index-html.png)
+
+El archivo *index.html* es fundamental en cualquier sitio web. Los servidores web buscan automáticamente este archivo cuando un usuario visita la URL raíz de un directorio (ej. `www.ejemplo.com`).
 
 ### Por qué es importante
 
-* **Página de inicio:** `index.html` actúa como la puerta de entrada a tu sitio web, mostrando el contenido inicial que los usuarios verán.
-* **Navegación:** Facilita que los visitantes accedan a otras páginas del sitio mediante enlaces desde esta página principal.
-* **SEO y motores de búsqueda:** Tener un `index.html` correctamente estructurado ayuda a que los motores de búsqueda indexen tu sitio de manera eficiente.
-* **Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo como punto de entrada.
+**Página de inicio:** index.html actúa como la puerta de entrada a tu sitio web, mostrando el contenido inicial que los usuarios verán.
 
-### Buenas prácticas
+**Navegación:** Facilita que los visitantes accedan a otras páginas del sitio mediante enlaces desde esta página principal.
 
-* Mantén la estructura limpia: `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` correctamente anidados.
-* Incluye títulos (`<title>`), meta etiquetas (`<meta>`), y enlaces a hojas de estilo o scripts.
-* Usa contenido relevante y jerarquía clara de encabezados (`<h1>`, `<h2>`, `<h3>`).
-* Optimiza el rendimiento: minimiza scripts y CSS innecesarios para que la página cargue rápido.
-* Incluye accesibilidad: etiquetas semánticas y atributos como `alt` en imágenes.
+**SEO y motores de búsqueda:** Tener un index.html correctamente estructurado ayuda a que los motores de búsqueda indexen tu sitio de manera eficiente.
 
-### Ejemplo básico de `index.html`
+**Compatibilidad:** La mayoría de servidores y servicios de hosting esperan este archivo como punto de entrada.
 
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Principal</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Bienvenido a Mi Sitio</h1>
-    </header>
-
-    <main>
-        <section>
-            <h2>Sobre Nosotros</h2>
-            <p>Esta es la página de inicio donde presentamos nuestro sitio web.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Mi Sitio Web.</p>
-    </footer>
-</body>
-</html>
-```
-
----
-
-### 5. Fundamentos Web
-
----
+## 5. Fundamentos Web
 
 ### 5.2. ¿Qué es HTML?
 
+![Logo HTML](/html/html-logo.jpg)
+
 * HTML (**HyperText Markup Language**) es el **lenguaje estándar de marcado**.
+
 * Se utiliza para **crear la estructura y el contenido** de una página web.
-* No es un lenguaje de programación, sino un **lenguaje descriptivo** que indica al navegador cómo mostrar el contenido.
+
+* No es un lenguaje de programación, sino un **lenguaje de marcas** que indica al navegador cómo mostrar el contenido.
+
 * Actúa como el **esqueleto** de cualquier sitio web.
 * Define elementos como: Títulos (`<h1>` a `<h6>`), Párrafos (`<p>`), Enlaces (`<a>`), Imágenes (`<img>`), Listas (`<ul>`, `<ol>`, `<li>`), Tablas (`<table>`, `<tr>`, `<td>`) y Formularios (`<form>`, `<input>`, `<button>`).
-
----
 
 ### Estructura básica de un documento HTML
 
@@ -450,35 +339,30 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 </body>
 </html>
 ```
-## Organización y Legibilidad
-
-* El código debe ser **legible** para otros humanos, no solo para el navegador.
-* **Comentarios:** Se usan para dejar notas en el código que el navegador ignorará. La sintaxis es ``.
-* **Sangrado (Indentación):** Se usa para ver claramente qué etiquetas están dentro de otras (anidación) y facilitar la lectura.
-* **Organización de Archivos:** Se recomienda organizar el proyecto en carpetas (ej. `/css` para estilos, `/imatges` para imágenes).
-* **`index.html`:** El archivo HTML principal de la web debe llamarse `index.html`, ya que es el nombre que los servidores buscan por defecto.
 
 ## Elementos y Atributos
-
----
-
 ### Tipos de Elementos
 
 * **Elementos de Bloque (Block):** Ocupan todo el ancho disponible y empiezan en una nueva línea (ej. `<p>`, `<h1>`, `<div>`).
-* **Elementos de Línea (Inline):** Ocupan solo el espacio necesario y fluyen dentro del texto (ej. `<a>`, `<strong>`, `<img>`).
 
----
+* **Elementos de Línea (Inline):** Ocupan solo el espacio necesario y fluyen dentro del texto (ej. `<a>`, `<strong>`, `<img>`).
 
 ### Atributos Genéricos
 
-* Los atributos proporcionan **información adicional** a una etiqueta.
-* **`id`:** Identificador **único** para un elemento en la página.
-* **`class`:** Nombre de clase para agrupar múltiples elementos (muy usado para CSS).
-* **`style`:** Se usa para aplicar estilos CSS directamente (inline).
-* **`title`:** Muestra un texto (tooltip) cuando el ratón pasa por encima.
-* **`lang`:** Especifica el idioma del contenido (ej. `<html lang="ca">`).
+![Explicación breve deatributos genéricos](/html/atributo-generico.webp)
 
----
+Los atributos proporcionan **información adicional** a una etiqueta.
+
+**id:** Identificador **único** para un elemento en la página.
+
+**`class`:** Nombre de clase para agrupar múltiples elementos (muy usado para CSS).
+
+**`style`:** Se usa para aplicar estilos CSS directamente (inline).
+
+**`title`:** Muestra un texto (tooltip) cuando el ratón pasa por encima.
+
+**`lang`:** Especifica el idioma del contenido (ej. `<html lang="ca">`).
+
 
 ## Etiquetas de Texto Principales
 
@@ -492,109 +376,139 @@ El archivo `index.html` es fundamental en cualquier sitio web. Los servidores we
 * **`<div>`:** Contenedor genérico de **bloque**. Se usa para agrupar y estructurar secciones.
 * **`<span>`:** Contenedor genérico en **línea**. Se usa para agrupar texto o elementos dentro de un bloque.
 
-### ⚠️ Etiquetas "antiguas" (Evitar)
+### Etiquetas "antiguas" (Evitar)
 
 * No se deben usar etiquetas como `<b>` (negrita) o `<i>` (cursiva), ya que solo definen presentación y no estructura.
+
 * Para eso se usa CSS. En su lugar, usa `<strong>` y `<em>` que tienen valor semántico (de significado).
 
----
 ##  Enlaces e Imágenes
-
----
-
 ### Enlaces (Hipervínculos)
 
-* Se crean con la etiqueta `<a>` (de ancla) y el atributo `href` que indica el destino.
-* **Enlaces externos:** Apuntan a otra web (ej. `<a href="https://google.com">Google</a>`).
-* **Enlaces locales:** Apuntan a otra página de tu propio sitio (ej. `<a href="contacto.html">Contacto</a>`).
-* **Enlaces tipo ancla (internos):** Permiten navegar a otra parte *de la misma página*.
-    * Primero se crea el ancla con un `id` (ej. `<h2 id="seccion1">Sección 1</h2>`).
-    * Luego se enlaza a ella usando `#` (ej. `<a href="#seccion1">Ir a Sección 1</a>`).
+![Explicación a href](/html/a-hred.webp)
 
----
+Se crean con la etiqueta `<a>` (de ancla) y el atributo `href` que indica el destino.
+
+* **Enlaces externos:** Apuntan a otra web (ej. `<a href="https://google.com">Google</a>`).
+
+**Enlaces locales:** Apuntan a otra página de tu propio sitio (ej. `<a href="contacto.html">Contacto</a>`)
+.
+**Enlaces tipo ancla (internos):** Permiten navegar a otra parte *de la misma página*.
+
+Primero se crea el ancla con un `id` (ej. `<h2 id="seccion1">Sección 1</h2>`).
+Luego se enlaza a ella usando `#` (ej. `<a href="#seccion1">Ir a Sección 1</a>`).
 
 ### Imágenes
 
-* Se insertan con la etiqueta `<img>`, que es un elemento en línea y no tiene etiqueta de cierre.
-* **`src`:** Atributo obligatorio que indica la **ruta** de la imagen (URL o archivo local).
-* **`alt`:** Atributo obligatorio que provee un **texto alternativo** si la imagen no se puede cargar.
-* **Ejemplo:** `<img src="media/logo.png" alt="Logo de la web">`.
+![Explicación etiqueta img resumida](/html/etiqueta-img.webp.webp)
+
+Se insertan con la etiqueta `<img>`, que es un elemento en línea y no tiene etiqueta de cierre.
+
+**src:** Atributo obligatorio que indica la **ruta** de la imagen (URL o archivo local).
+
+**alt:** Atributo obligatorio que provee un **texto alternativo** si la imagen no se puede cargar.
+
+**Ejemplo:** `<img src="media/logo.png" alt="Logo de la web">`.
+
 * Una imagen puede ser un enlace si se envuelve en una etiqueta `<a>`.
 
----
-## 📊 Tablas
 
----
+## Tablas
+
+![Explicación a href](/html/tablas-html.jpg)
 
 * Se usan para mostrar **información tabular** (datos en filas y columnas).
+
 * **Importante:** No se deben usar tablas para la maquetación de la página (para eso se usan `<div>` y CSS).
-* **`<table>`:** El contenedor principal de la tabla.
-* **`<tr>`:** (Table Row) Define una **fila**.
-* **`<td>`:** (Table Data) Define una **celda** de datos.
-* **`<th>`:** (Table Header) Define una celda de **encabezado** (resaltada).
-* **`<thead>`, `<tbody>`, `<tfoot>`:** Etiquetas semánticas para agrupar las filas de la cabecera, el cuerpo y el pie de la tabla. 
-* **`colspan="2"`:** Hace que una celda se expanda para ocupar 2 columnas.
-* **`rowspan="2"`:** Hace que una celda se expanda para ocupar 2 filas.
 
----
+**`<table>`:** El contenedor principal de la tabla.
+**`<tr>`:** (Table Row) Define una **fila**.
 
-## 📋 Formularios
+**`<td>`:** (Table Data) Define una **celda** de datos.
 
----
+**`<th>`:** (Table Header) Define una celda de **encabezado** (resaltada).
+
+**`<thead>`, `<tbody>`, `<tfoot>`:** Etiquetas semánticas para agrupar las filas de la cabecera, el cuerpo y el pie de la tabla. 
+
+**`colspan="2"`:** Hace que una celda se expanda para ocupar 2 columnas.
+
+**`rowspan="2"`:** Hace que una celda se expanda para ocupar 2 filas.
+
+
+## Formularios
+
+![Imagen de un forulario en HTML](/html/formularios-html.png)
 
 * Se usan para **interactuar con el usuario** y permitirle enviar información.
-* El formulario completo se envuelve en la etiqueta **`<form>`**.
+
+El formulario completo se envuelve en la etiqueta **`<form>`**.
 
 ### Atributos de `<form>`
 
-* **`action`:** La URL (script o página) a la que se **enviarán los datos**.
-* **`method`:** El método HTTP para enviar los datos.
-    * **`get`:** Envía los datos en la URL (visibles, ej. `...php?nom=Anna`).
-    * **`post`:** Envía los datos de forma oculta en la cabecera HTTP.
+![Explicación a <form> y diferentes tipos](/html/atributos-form.jpg)
+
+**`action`:** La URL (script o página) a la que se **enviarán los datos**.
+
+**`method`:** El método HTTP para enviar los datos.
+
+**`get`:** Envía los datos en la URL (visibles, ej. `...php?nom=Anna`).
+
+**`post`:** Envía los datos de forma oculta en la cabecera HTTP.
 
 ### Controles de Formulario Comunes
 
-* **`name`:** Atributo **crucial**. Es el nombre que identifica al dato que se envía (ej. `name="nom"`).
-* **`<label>`:** Etiqueta de texto para un control (mejora la accesibilidad).
-* **`<fieldset>` y `<legend>`:** Agrupan controles relacionados (`<fieldset>`) con un título (`<legend>`).
-* **`<input type="text">`:** Campo de texto de una línea.
-* **`<input type="password">`:** Campo de contraseña (oculta el texto).
-* **`<input type="radio">`:** Botón de opción (permite seleccionar solo uno de un grupo).
-* **`<input type="checkbox">`:** Casilla de verificación (permite seleccionar varios).
-* **`<select>` y `<option>`:** Crean una lista desplegable.
-* **`<textarea>`:** Área para texto de múltiples líneas.
-* **`<input type="submit">`:** Botón que **envía** el formulario.
-* **`<input type="reset">`:** Botón que **borra** los datos del formulario.
+![Explicación breve atributos](/html/input-label.jpg)
 
----
+**`name`:** Atributo **crucial**. Es el nombre que identifica al dato que se envía (ej. `name="nom"`).
+
+**`<label>`:** Etiqueta de texto para un control (mejora la accesibilidad).
+
+**`<fieldset>` y `<legend>`:** Agrupan controles relacionados (`<fieldset>`) con un título (`<legend>`).
+
+**`<input type="text">`:** Campo de texto de una línea.
+
+**`<input type="password">`:** Campo de contraseña (oculta el texto).
+
+**`<input type="radio">`:** Botón de opción (permite seleccionar solo uno de un grupo).
+
+**`<input type="checkbox">`:** Casilla de verificación (permite seleccionar varios).
+
+**`<select>` y `<option>`:** Crean una lista desplegable.
+
+**`<textarea>`:** Área para texto de múltiples líneas.
+
+**`<input type="submit">`:** Botón que **envía** el formulario.
+
+**`<input type="reset">`:** Botón que **borra** los datos del formulario.
+
 
 ### 5.3. Validador HTML del W3C
+
+![Imágen Validador](/html/validador.png)
 
 El W3C (World Wide Web Consortium) es el organismo que define los estándares oficiales de HTML. Para asegurarte de que tu código HTML es correcto, profesional y sigue estos estándares, debes utilizar su validador en línea.
 
 Usar esta herramienta es fundamental por varias razones:
 
-* **Encuentra errores:** Detecta sintaxis incorrecta, como etiquetas mal cerradas (`<p>...</div>`), atributos obsoletos o elementos obligatorios que faltan (como el atributo `alt` en las imágenes `<img>`).
-* **Mejora la compatibilidad (Cross-Browser):** Un HTML válido asegura que tu página se vea y funcione de manera similar en todos los navegadores (Chrome, Firefox, Safari, etc.).
-* **Ayuda al SEO:** A los motores de búsqueda (como Google) les es más fácil entender y clasificar una página con código limpio y bien estructurado.
-* **Base para la accesibilidad (A11y):** Un HTML semántico y válido es el primer paso para que las tecnologías de asistencia (como lectores de pantalla) puedan interpretar tu web correctamente.
+**Encuentra errores:** Detecta sintaxis incorrecta, como etiquetas mal cerradas (`<p>...</div>`), atributos obsoletos o elementos obligatorios que faltan (como el atributo `alt` en las imágenes `<img>`).
+
+**Mejora la compatibilidad (Cross-Browser):** Un HTML válido asegura que tu página se vea y funcione de manera similar en todos los navegadores (Chrome, Firefox, Safari, etc.).
+
+**Ayuda al SEO:** A los motores de búsqueda (como Google) les es más fácil entender y clasificar una página con código limpio y bien estructurado.
 
 ### ¿Cómo se usa el validador?
 
 El validador es una herramienta en línea gratuita a la que puedes acceder aquí:
 **[validator.w3.org](https://validator.w3.org/)**
 
-
-
 Tienes tres formas principales de comprobar tu código:
 
 1.  **Validar por URI (URL):** Pegas la URL de tu sitio web si ya está publicado (ej. `https://www.ejemplo.com`).
+
 2.  **Validar por subida de archivo (File Upload):** Subes tu archivo `index.html` directamente desde tu ordenador.
+
 3.  **Validar por entrada directa (Direct Input):** Copias todo tu código HTML y lo pegas directamente en la caja de texto del validador.
 
-> **Objetivo:** Tu meta debería ser que el validador muestre un mensaje verde de éxito y reporte **"0 Errors"**. No te preocupes tanto por los "Warnings" (advertencias) al principio, pero los **"Errors" (errores) son obligatorios de corregir.**
-
----
 
 ## 6. Publicar tu Sitio Web con GitHub Pages
 
@@ -602,67 +516,87 @@ Tienes tres formas principales de comprobar tu código:
 
 Es la forma más rápida de poner tu proyecto en línea y compartirlo con el mundo.
 
+
 ### Cómo activar GitHub Pages
 
 El proceso es muy sencillo y se hace desde la configuración de tu repositorio:
 
+![Imágen Pages 1](/html/github-pages1.png)
+
 1.  En tu repositorio de GitHub, ve a la pestaña principal y haz clic en **"Settings"** (Configuración).
     
 2.  En el menú lateral izquierdo, busca y haz clic en **"Pages"**.
+
+![Imágen Pages 2](/html/github-pages2.png)
+
 3.  En la sección "Build and deployment" (Construcción y despliegue), mira la opción **"Source"** (Fuente).
+
 4.  Asegúrate de que esté seleccionada la opción **"Deploy from a branch"** (Desplegar desde una rama).
+
 5.  En el menú desplegable, elige la rama que contiene tu código final (normalmente será **`main`**).
+
 6.  Deja la carpeta como `/(root)` y haz clic en **"Save"** (Guardar).
 
-¡Y ya está! Después de unos segundos (a veces puede tardar un minuto), GitHub procesará tus archivos y publicará tu sitio.
+![Imágen Pages 3](/html/github-pages3.png)
 
-> **Importante:** Tu página estará disponible públicamente en una URL con este formato. Podrás ver el enlace exacto en la misma página de "Settings" una vez que se publique.
->
+Y ya está, después de unos segundos (a veces puede tardar un minuto), GitHub procesará tus archivos y publicará tu sitio.
+
+![Imágen Pages 4](/html/github-pages4.png)
+
+> **Importante:** La página estará disponible públicamente en una URL con este formato. Podrás ver el enlace exacto en la misma página de "Settings" una vez que se publique.
+
 > `https://tu-usuario.github.io/nombre-del-repositorio/`
->
-> (Recuerda que para que esto funcione, tu archivo HTML principal **debe llamarse `index.html`**).
 
----
+> (Para que funcione **debe llamarse `index.html`**).
+
 
 ## 3. Otras Herramientas Útiles
 
 ### Font Awesome (Iconos)
 
+![Imágen Logo Fontawesome](/html/fontawesome.png)
+
 Es un popular conjunto de herramientas de iconos y fuentes basado en CSS. Te permite añadir fácilmente miles de iconos vectoriales (escalables y personalizables con CSS) a tu página web con una simple línea de código.
 
-> **Ejemplo de uso:**
-> ```html
+**Ejemplo de uso:**
+```
 > <i class="fas fa-rocket"></i>
-> ```
-> (Esto mostraría un icono de cohete 🚀).
+> (Esto mostraría un icono de cohete).
+```
 
 ### Favicons
 
-Un **favicon** (icono de favorito) es el pequeño icono (normalmente de 16x16 o 32x32 píxeles) que aparece en la pestaña del navegador, justo al lado del título de la página.
+![Imágen Logo Favicon](/html/favicon.jpg)
+
+Un **favicon** (icono de favorito) es el pequeño icono que aparece en la pestaña del navegador, justo al lado del título de la página.
 
 
-* **¿Para qué sirve?** Es clave para la imagen de marca (*branding*) y la usabilidad, ya que ayuda a los usuarios a identificar rápidamente tu pestaña entre muchas otras.
+**¿Para qué sirve?** Es clave para la imagen de marca y la usabilidad, ya que ayuda a los usuarios a identificar rápidamente tu pestaña entre muchas otras.
 
-### ¿Cómo crearlos?
+### Creación de Favicons
 
-1.  Crea una versión simplificada y cuadrada de tu logo.
-2.  Guárdala como `.png` o utiliza un generador en línea (como `favicon.io`) para crear un archivo `.ico` (que ofrece mayor compatibilidad).
-3.  Añade el archivo al directorio de tu proyecto.
-4.  Enlázalo dentro de la etiqueta `<head>` de tu HTML:
+![Generador de Favicons](html/favicon-generator.png)
+
+1. **Diseño:** Crea una versión simplificada y cuadrada de tu logo.
+
+2. **Formato:** Guárdala como `.png` o utiliza un generador en línea (como `favicon.io`) para crear un archivo `.ico` (mayor compatibilidad).
+
+3. **Ubicación:** Añade el archivo al directorio principal de tu proyecto.
+
+4. **Código:** Enlázalo dentro de la etiqueta `<head>` de tu HTML.
 
 ```html
 <head>
-  <meta charset="UTF-8">
-  <title>Título de mi Página</title>
-  
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Título de mi Página</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 ```
 
 # Apuntes de **CSS**  (Hojas de Estilo en Cascada)
 
-![CSS](css.png) 
+![CSS](/css/css.png) 
 ## Antes de nada, **que es CSS?** 
 
 Es un lenguaje de estilo que se utiliza para controlar la presentación, el diseño y la apariencia de documentos escritos en un lenguaje de marcado como HTML 
@@ -680,7 +614,7 @@ En resumen, es un tipo de lenguaje que se utiliza para darle estilo a nuestro c�
 
 **Empezó** en el 1996-1998 y se publicó el primer contenido CSS en ese año.
 
-![Línea de Tiempo Evolución CSS](línea-del-tiempo-css.png)
+![Línea de Tiempo Evolución CSS](/css/línea-del-tiempo-css.png)
 
 Los navegadores cuando van apareciendo nuevas funciones las van implementando poco a poco. 
 
@@ -721,7 +655,7 @@ Existen 3 formas principales de aplicar estilos, aunque en el siguiente ejemplo 
 
 ### Ejemplo Práctico 
 
-![IntroduccionCSS](css2.png)
+![IntroduccionCSS](/css/css2.png)
 
 En esta captura de código podemos ver dos de las formas mencionadas arriba en el mismo archivo:
 
@@ -745,15 +679,15 @@ Aquí se está aplicando un color y tamaño específico solo para ese párrafo.
 
 "El estilo.css dice una cosa y el resultado otra, veremos porque.
 
-![Código CSS](cass4.png)
+![Código CSS](/css/cass4.png)
 
-![Resultado en Navegador](css3.png)
+![Resultado en Navegador](/css/css3.png)
 
 **¿Qué está pasando aquí?**
 
 1.  **La Regla General (El archivo externo):**
 
-En nuestro archivo CSS, hemos puesto una norma para toda la web: *"Todos los párrafos (`p`) deben ser de color rojo"*.
+En nuestro archivo CSS, hemos puesto una norma para toda la web: *"Todos los párrafos (p) deben ser de color rojo"*.
 
 * *Resultado:* El primer párrafo obedece y se pinta de rojo.
 
@@ -774,7 +708,7 @@ Por eso: **Orden directa (Inline) > Norma global (Externo).**
 
 ## Sistema de Puntos
 
-![Explicación de los puntos en una imágen](explicación-puntos.png)
+![Explicación de los puntos en una imágen](/css/explicación-puntos.png)
 
 Cuando hay un conflicto (como el rojo y verde de las capturas) el navegador suma puntos. **Gana el que más tenga**
 
@@ -787,9 +721,9 @@ Cuando hay un conflicto (como el rojo y verde de las capturas) el navegador suma
 
 ### 2. Las cuentas claras 
 
-![Código CSS](css2.png)
-![Código CSS](cass4.png)
-![Resultado](css3.png)
+![Código CSS](/css/css2.png)
+![Código CSS](/css/cass4.png)
+![Resultado](/css/css3.png)
 
 * **El CSS externo (Rojo):** Es una etiqueta *p* -> **1 punto**.
 
@@ -822,7 +756,7 @@ p {
     color: blue; /* Comentario en la misma línea */
 }
 
-![Representación de los comentarios](comentarios-css.png)
+![Representación de los comentarios](/css/comentarios-css.png)
 
 # Apuntes: Selectores CSS (Tipos y Uso)
 
@@ -830,7 +764,7 @@ Selectores --> Para que sirven?
 
 Sirven para decirle al navegador quiero cambiar *"x"* (color, tamaño, borde , etc..)
 
-![Estructura de una Regla CSS](sintáxis-básica.png)
+![Estructura de una Regla CSS](/css/sintáxis-básica.png)
 
 ## 1. Los Básicos 
 
@@ -870,7 +804,7 @@ Sirven para seleccionar cosas muy específicas sin tener que llenar el HTML de c
 ### A. Selector Universal
 **¿Qué es?** Elige **TODO** lo que hay en la página.
 
-Se aplica usando el asterísco `*`.
+Se aplica usando el asterísco *.
 
 **Ejemplo:**
 { margin: 0; } 
@@ -898,7 +832,7 @@ Solo afecta a los hijos **directos** (el nivel inmediatamente inferior).
     
 div > p → Solo los párrafos que están justo dentro del div.
 
-![Esquema Hijos vs Descendientes](selectores-padrehijo.png)
+![Esquema Hijos vs Descendientes](/css/selectores-padrehijo.png)
 
 2. **Selector de Descendientes (espacio)**:
 Afecta a los hijos, nietos, bisnietos... a cualquiera que esté dentro (hablando de ramas de importancia)
@@ -914,7 +848,7 @@ div p → Cualquier párrafo dentro del div
 
 ### E. Pseudoclases (:)
 
-![Lista de los diferentes atributos](lista-pseudoclases.png)
+![Lista de los diferentes atributos](/css/lista-pseudoclases.png)
 
 **¿Qué es?** Define estilos según el **estado** del elemento o la interacción del usuario.
 
@@ -954,7 +888,7 @@ El navegador usa un **sistema de puntos**, pero la regla fácil es: **"Cuanto m�
 
 ## 4. El Modelo de Caja (Box Model)
 
-![Imágen representativa de Box Model](boxmargin.png)
+![Imágen representativa de Box Model](/css/boxmargin.png)
 
 **¿Qué es?**
 
@@ -977,7 +911,7 @@ Es la propiedad que define el espacio **externo** alrededor de la caja. Es un á
 
 **Control por lados:** Se puede definir una medida diferente para cada uno de los cuatro lados: arriba (top), derecha (right), abajo (bottom) e izquierda (left).
 
-![Lista Propiedades Margin](margin-css.png)
+![Lista Propiedades Margin](/css/margin-css.png)
 
 **Centrado automático:** Si usas el valor auto, el navegador calcula el espacio sobrante y lo reparte (se usa comúnmente para centrar bloques horizontalmente).
 
@@ -988,7 +922,7 @@ Es la propiedad que define el espacio **externo** alrededor de la caja. Es un á
 ### B. Atajo: Escribir los 4 lados de golpe (Shorthand)
 En lugar de escribir 4 líneas de código, puedes definir el margen (o el relleno) en una sola línea. El navegador interpreta los lados según cuántos valores pongas:
 
-![Ejemplos Shorthand Colores](padding-css.png)
+![Ejemplos Shorthand Colores](/css/padding-css.png)
 
 **1 valor:** Aplica a los **4 lados** por igual.
     
@@ -1017,7 +951,7 @@ Controla cómo se comporta el elemento dentro de la página.
 ### B. El problema del tamaño (*box-sizing*)
 Por defecto, si añades relleno (*padding*) o borde a una caja, estos se suman al ancho total, haciendo la caja más grande de lo planeado.
 
-![Solución Box Sizing](display-block.png)
+![Solución Box Sizing](/css/display-block.png)
 
 **Solución (*border-box*):** Cambia el cálculo para que el relleno y el borde se incluyan **dentro** de las medidas que has definido. 
 
@@ -1027,7 +961,7 @@ Por defecto, si añades relleno (*padding*) o borde a una caja, estos se suman a
 
 Define qué pasa cuando el contenido es más grande que la caja y no cabe.
 
-![Tipos de Overflow](desbordamientos-overflow.png)
+![Tipos de Overflow](/css/desbordamientos-overflow.png)
 
 **visible:** El contenido se sale de la caja y se ve por fuera (es lo que pasa por defecto).
 
@@ -1039,7 +973,7 @@ Define qué pasa cuando el contenido es más grande que la caja y no cabe.
 
 ### B. Desbordamiento de Texto (text-overflow)
 
-![Tipos de Overflow](desbordamiento-overflow.png)
+![Tipos de Overflow](/css/desbordamiento-overflow.png)
 
 Sirve específicamente para controlar qué pasa con el **texto** cuando se corta por falta de espacio.
 
@@ -1062,7 +996,7 @@ Para que funcione, necesitas definir dos roles:
 ### B. Los Ejes (Dirección)
 Flexbox organiza los elementos siguiendo dos líneas imaginarias:
 
-![Imágen representativa de los ejes de FlexBox](ejes.png)
+![Imágen representativa de los ejes de FlexBox](/css/ejes.png)
 
 **Eje Principal:** Es la dirección principal hacia donde van los elementos (por defecto es horizontal, en fila).
 
@@ -1070,11 +1004,11 @@ Flexbox organiza los elementos siguiendo dos líneas imaginarias:
 
 ### Resumen Visual
 
-![Representación del FlexBox](resumen-displayflex.png)
+![Representación del FlexBox](/css/resumen-displayflex.png)
 
 ## 8. Diseño Responsivo (Responsive Design)
 
-![Representación del Responsive](diseño-responsive.png)
+![Representación del Responsive](/css/diseño-responsive.png)
 
 **¿Qué es?**
 Es una técnica de diseño que permite que un sitio web se ajuste y reorganice automáticamente según el tamaño de la pantalla (móvil, tablet u ordenador) para que siempre se lea bien.
@@ -1094,7 +1028,7 @@ Es una técnica de diseño que permite que un sitio web se ajuste y reorganice a
 Son reglas especiales de CSS que funcionan como un "condicional". 
 Sirven para aplicar estilos específicos **solo** si la pantalla cumple ciertos requisitos (como tener un ancho mínimo o máximo).
 
-![Representación de Media Queries](media-queries.png)
+![Representación de Media Queries](/css/media-queries.png)
 
 **Funcionamiento Técnico (Lógica Condicional):**
 Las *Media Queries* actúan como una sentencia lógica. 
