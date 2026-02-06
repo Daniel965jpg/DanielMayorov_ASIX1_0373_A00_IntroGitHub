@@ -110,7 +110,6 @@ Un **repositorio** (o *repo*) es simplemente una carpeta de proyecto que está s
 
 Clonar significa descargar una copia completa de un proyecto existente en **GitHub** (incluyendo todo su historial) a tu ordenador.
 
-
 1. **Busca el botón verde “Code”** en el repositorio de GitHub y copia la URL HTTPS.
 Ejemplo: `https://github.com/usuario/nombre-del-repo.git`
 
@@ -385,7 +384,7 @@ Los atributos proporcionan **información adicional** a una etiqueta.
 ##  Enlaces e Imágenes
 ### Enlaces (Hipervínculos)
 
-![Explicación a href](/html/a-hred.webp)
+![Explicación a href](/html/a-hred.png)
 
 Se crean con la etiqueta `<a>` (de ancla) y el atributo `href` que indica el destino.
 
@@ -400,7 +399,7 @@ Luego se enlaza a ella usando `#` (ej. `<a href="#seccion1">Ir a Sección 1</a>`
 
 ### Imágenes
 
-![Explicación etiqueta img resumida](/html/etiqueta-img.webp.webp)
+![Explicación etiqueta img resumida](/html/etiqueta-img.png)
 
 Se insertan con la etiqueta `<img>`, que es un elemento en línea y no tiene etiqueta de cierre.
 
